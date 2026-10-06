@@ -539,7 +539,7 @@
         © 2026 GEORIXA® Earth Intelligence. All rights reserved. | Official Nigeria Mining Week Showcase
     </footer>
 
-    <!-- INTERACTIVE 3D GLOBE & SATELLITE RAYS SCRIPT -->
+    <!-- INTERACTIVE 3D GLOBE & DETAILED SATELLITE SCRIPT -->
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('canvas-3d');
@@ -571,11 +571,37 @@
             ring.rotation.x = Math.PI / 3;
             scene.add(ring);
 
-            // Satellite Node
-            const satGeo = new THREE.SphereGeometry(0.08, 12, 12);
-            const satMat = new THREE.MeshBasicMaterial({ color: 0xFFD700 });
-            const sat = new THREE.Mesh(satGeo, satMat);
-            scene.add(sat);
+            // --- DETAILED SATELLITE MODEL ---
+            const satelliteGroup = new THREE.Group();
+
+            // 1. Main Body (Gold Box)
+            const bodyGeo = new THREE.BoxGeometry(0.12, 0.12, 0.12);
+            const bodyMat = new THREE.MeshBasicMaterial({ color: 0xFFD700 });
+            const body = new THREE.Mesh(bodyGeo, bodyMat);
+            satelliteGroup.add(body);
+
+            // 2. Solar Panel Left (Blue)
+            const panelGeo = new THREE.BoxGeometry(0.3, 0.15, 0.02);
+            const panelMat = new THREE.MeshBasicMaterial({ color: 0x00BFFF });
+            const panelLeft = new THREE.Mesh(panelGeo, panelMat);
+            panelLeft.position.set(-0.22, 0, 0);
+            satelliteGroup.add(panelLeft);
+
+            // 3. Solar Panel Right (Blue)
+            const panelRight = new THREE.Mesh(panelGeo, panelMat);
+            panelRight.position.set(0.22, 0, 0);
+            satelliteGroup.add(panelRight);
+
+            // 4. Antenna (White Cone pointing toward Earth)
+            const antennaGeo = new THREE.ConeGeometry(0.04, 0.08, 8);
+            const antennaMat = new THREE.MeshBasicMaterial({ color: 0xFFFFFF });
+            const antenna = new THREE.Mesh(antennaGeo, antennaMat);
+            antenna.rotation.x = Math.PI / 2; 
+            antenna.position.set(0, 0, -0.1);
+            satelliteGroup.add(antenna);
+
+            scene.add(satelliteGroup);
+            // --------------------------------
 
             // Glowing Ray Beam Line
             const lineMat = new THREE.LineBasicMaterial({ color: 0x00e5ff, transparent: true, opacity: 0.8 });
@@ -594,7 +620,10 @@
                 const satX = Math.cos(angle) * 2.3;
                 const satZ = Math.sin(angle) * 2.3 * Math.cos(Math.PI / 3);
                 const satY = Math.sin(angle) * 2.3 * Math.sin(Math.PI / 3);
-                sat.position.set(satX, satY, satZ);
+                
+                // Update satellite position and make it look at Earth
+                satelliteGroup.position.set(satX, satY, satZ);
+                satelliteGroup.lookAt(0, 0, 0);
 
                 // Beam Ray from Satellite to Earth Center Target
                 const points = [
