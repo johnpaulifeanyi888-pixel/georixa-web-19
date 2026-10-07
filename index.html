@@ -50,7 +50,7 @@
             padding: 60px 5%; text-align: center; background: radial-gradient(circle at center, #1a102e 0%, #0a0714 100%);
         }
         #canvas-3d {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.9;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.95;
         }
         .hero-content { position: relative; z-index: 2; max-width: 1050px; margin: 0 auto; }
         
@@ -116,9 +116,7 @@
         .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
         .grid-5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; }
 
-        .card {
-            padding: 28px; border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+        .card { padding: 28px; border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .card:hover { transform: translateY(-5px); }
         .card h3 { margin-bottom: 10px; font-size: 1.25rem; font-weight: 800; }
         .card p { font-size: 0.95rem; line-height: 1.6; }
@@ -151,90 +149,42 @@
         .product-card h3 { font-size: 1.4rem; font-weight: 900; margin-bottom: 10px; color: var(--text-primary); }
         .product-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.55; margin-bottom: 14px; }
         
-        .product-card.highlight {
-            background: #22153d; border-color: var(--accent-purple);
-            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.25);
-        }
+        .product-card.highlight { background: #22153d; border-color: var(--accent-purple); box-shadow: 0 10px 30px rgba(168, 85, 247, 0.25); }
         .product-card.highlight h3 { color: var(--accent-purple); }
         .product-card.highlight p { color: var(--text-primary); }
-
         .product-card.coral { border-color: var(--accent-coral); }
         .product-card.purple-std { border-color: var(--accent-purple); }
 
-        .badge-status {
-            display: inline-block; padding: 5px 13px; border-radius: 5px;
-            font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
-        }
+        .badge-status { display: inline-block; padding: 5px 13px; border-radius: 5px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
         .badge-pilot { background: rgba(50, 205, 50, 0.18); color: var(--accent-lime); border: 1px solid var(--accent-lime); }
         .badge-soon { background: rgba(0, 191, 255, 0.18); color: var(--accent-blue); border: 1px solid var(--accent-blue); }
 
-        .step-card {
-            background: var(--card-white); border: 1px solid var(--border-white);
-            padding: 28px 24px; border-radius: 12px; position: relative; transition: transform 0.3s;
-        }
+        .step-card { background: var(--card-white); border: 1px solid var(--border-white); padding: 28px 24px; border-radius: 12px; position: relative; transition: transform 0.3s; }
         .step-card:hover { transform: translateY(-4px); }
-        .step-number {
-            font-size: 2.4rem; font-weight: 900; margin-bottom: 10px;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-        }
+        .step-number { font-size: 2.4rem; font-weight: 900; margin-bottom: 10px; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .step-card h3 { color: var(--accent-blue); font-size: 1.15rem; margin-bottom: 10px; font-weight: 800; }
         .step-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.55; }
 
         .mineral-category { background: var(--card-white); border: 1px solid var(--border-white); padding: 22px; border-radius: 12px; }
-        .mineral-category h4 {
-            color: var(--accent-blue); border-bottom: 1px solid var(--border-white);
-            padding-bottom: 8px; margin-bottom: 12px; font-size: 1.1rem;
-            text-transform: uppercase; letter-spacing: 1px; font-weight: 900;
-        }
+        .mineral-category h4 { color: var(--accent-blue); border-bottom: 1px solid var(--border-white); padding-bottom: 8px; margin-bottom: 12px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; }
         .mineral-tags { display: flex; flex-wrap: wrap; gap: 7px; }
-        .mineral-tag {
-            background: #e0f2fe; border: 1px solid #bae6fd;
-            color: #0c4a6e; padding: 6px 12px; border-radius: 4px; 
-            font-size: 0.9rem; font-weight: 800;
-        }
+        .mineral-tag { background: #e0f2fe; border: 1px solid #bae6fd; color: #0c4a6e; padding: 6px 12px; border-radius: 4px; font-size: 0.9rem; font-weight: 800; }
 
-        .mission-statement {
-            text-align: center; font-size: 1.4rem; font-weight: 900; color: var(--accent-blue);
-            margin: 35px auto 20px; max-width: 800px; line-height: 1.4;
-        }
-        .tagline-final {
-            text-align: center; font-size: 1.3rem; font-weight: 900; letter-spacing: 1px; 
-            color: var(--text-dark); text-transform: uppercase; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.5;
-        }
+        .mission-statement { text-align: center; font-size: 1.4rem; font-weight: 900; color: var(--accent-blue); margin: 35px auto 20px; max-width: 800px; line-height: 1.4; }
+        .tagline-final { text-align: center; font-size: 1.3rem; font-weight: 900; letter-spacing: 1px; color: var(--text-dark); text-transform: uppercase; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.5; }
         .tagline-final .gold { color: var(--accent-gold-dark); }
         .tagline-final .cyan { color: #0099cc; }
         
-        .disclaimer-text {
-            text-align: center; font-size: 0.9rem; color: var(--text-muted);
-            max-width: 800px; margin: 0 auto 35px; line-height: 1.5; font-style: italic; font-weight: 500;
-        }
-        .contact-box {
-            max-width: 650px; margin: 0 auto; background: #f0f4f8;
-            padding: 40px 32px; border-radius: 12px; border: 2px solid var(--border-white); text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
+        .disclaimer-text { text-align: center; font-size: 0.9rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 35px; line-height: 1.5; font-style: italic; font-weight: 500; }
+        .contact-box { max-width: 650px; margin: 0 auto; background: #f0f4f8; padding: 40px 32px; border-radius: 12px; border: 2px solid var(--border-white); text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         .contact-box h3 { color: var(--accent-blue); margin-bottom: 15px; font-size: 1.8rem; font-weight: 900; }
         .contact-box p { color: var(--text-muted); margin-bottom: 25px; font-size: 1.1rem; font-weight: 600; }
         .contact-box .phone { color: var(--text-dark); font-weight: 900; font-size: 1.4rem; }
 
-        .whatsapp-float {
-            position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
-            background-color: var(--btn-wa); color: #fff; border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 2000;
-            display: flex; align-items: center; justify-content: center;
-            text-decoration: none; animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: var(--btn-wa); color: #fff; border-radius: 50%; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 2000; display: flex; align-items: center; justify-content: center; text-decoration: none; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
 
-        footer {
-            text-align: center; padding: 35px 5%; border-top: 1px solid var(--border-purple);
-            color: var(--text-secondary); font-size: 0.9rem; background: var(--bg-purple); font-weight: 600;
-        }
+        footer { text-align: center; padding: 35px 5%; border-top: 1px solid var(--border-purple); color: var(--text-secondary); font-size: 0.9rem; background: var(--bg-purple); font-weight: 600; }
 
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 12px; padding: 14px 5%; }
@@ -282,7 +232,7 @@
         <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">Layer Fusion Framework</div></div>
         <div class="stat-item"><div class="stat-number">30+</div><div class="stat-label">Target Minerals</div></div>
         <div class="stat-item"><div class="stat-number">6</div><div class="stat-label">Days Delivery Time</div></div>
-        <div class="stat-item"><div class="stat-number">🇳🇬</div><div class="stat-label">Nigeria Field Network</div></div>
+        <div class="stat-item"><div class="stat-number">🇬</div><div class="stat-label">Nigeria Field Network</div></div>
     </div>
 
     <section id="framework" class="section-white">
@@ -391,118 +341,38 @@
 
             const EARTH_RADIUS = 1.8;
 
-            // 1. Wireframe Earth Sphere (cyan)
-            const globeGeo = new THREE.SphereGeometry(EARTH_RADIUS, 32, 32);
-            const globeMat = new THREE.MeshBasicMaterial({
-                color: 0x00BFFF, wireframe: true, transparent: true, opacity: 0.18
+            // 1. TEXTURE MAPPED EARTH GLOBE
+            // INSTRUCTION: To use your own uploaded image (e.g., a heatmap or terrain map):
+            // 1. Upload your image (e.g., 'my-heatmap.jpg') to your GitHub repository.
+            // 2. Change the URL below from the CDN link to just 'my-heatmap.jpg'.
+            const textureLoader = new THREE.TextureLoader();
+            // Using a reliable dark earth texture for the live demo
+            const earthTexture = textureLoader.load('https://cdn.jsdelivr.net/gh/mrdoob/three.js@r128/examples/textures/planets/earth_atmos_2048.jpg');
+            
+            const globeGeo = new THREE.SphereGeometry(EARTH_RADIUS, 64, 64);
+            const globeMat = new THREE.MeshPhongMaterial({
+                map: earthTexture,
+                specular: new THREE.Color(0x333333),
+                shininess: 15
             });
             const globe = new THREE.Mesh(globeGeo, globeMat);
             scene.add(globe);
 
-            // 2. HIGH-FIDELITY CONTINENT OUTLINES
-            // More detailed coordinates for recognizable continent shapes
-            const continentData = {
-                northAmerica: [
-                    [71,-157],[72,-140],[71,-120],[70,-100],[68,-90],[65,-80],[60,-65],
-                    [55,-60],[50,-55],[47,-53],[44,-60],[42,-70],[40,-75],[38,-77],
-                    [35,-76],[32,-80],[30,-82],[28,-83],[25,-80],[25,-90],[28,-95],
-                    [30,-97],[32,-105],[30,-110],[32,-117],[35,-120],[40,-124],
-                    [45,-125],[50,-128],[55,-132],[58,-137],[60,-147],[62,-165],[65,-168],[71,-157]
-                ],
-                southAmerica: [
-                    [12,-72],[10,-75],[8,-78],[5,-80],[2,-80],[-2,-80],[-5,-81],
-                    [-8,-78],[-12,-77],[-15,-75],[-18,-70],[-22,-65],[-25,-58],
-                    [-30,-52],[-33,-52],[-38,-57],[-42,-63],[-46,-67],[-50,-73],
-                    [-53,-72],[-55,-68],[-55,-65],[-52,-70],[-48,-75],[-43,-80],
-                    [-38,-73],[-33,-72],[-28,-70],[-22,-70],[-17,-72],[-12,-77],
-                    [-7,-80],[-3,-80],[0,-80],[3,-77],[7,-75],[10,-73],[12,-72]
-                ],
-                europe: [
-                    [36,-9],[38,-9],[40,-8],[43,-8],[44,-2],[46,-2],[48,-5],
-                    [50,-5],[52,-5],[54,-8],[56,-6],[58,-6],[60,-5],[62,-5],
-                    [64,-12],[66,-15],[68,-16],[70,-20],[71,-26],[71,-28],
-                    [70,-30],[68,-30],[65,-28],[62,-25],[60,-20],[58,-15],
-                    [56,-10],[55,-8],[54,-10],[52,-5],[50,0],[48,3],[46,5],
-                    [44,8],[42,10],[40,12],[38,15],[37,22],[38,26],[40,28],
-                    [42,30],[44,32],[46,30],[48,28],[50,25],[52,22],[54,20],
-                    [56,22],[58,25],[60,25],[62,28],[64,30],[66,28],[68,26],
-                    [70,28],[71,30],[70,32],[68,32],[65,30],[62,28],[60,25],
-                    [58,22],[56,20],[54,18],[52,15],[50,12],[48,10],[46,8],
-                    [44,5],[42,3],[40,0],[38,-2],[36,-5],[36,-9]
-                ],
-                africa: [
-                    [37,-1],[36,10],[35,12],[33,12],[32,25],[31,32],[30,33],
-                    [28,34],[25,35],[22,37],[18,40],[15,42],[12,44],[10,45],
-                    [8,48],[5,47],[2,45],[0,42],[-3,41],[-6,40],[-10,40],
-                    [-15,41],[-20,43],[-25,35],[-30,31],[-34,26],[-34,20],
-                    [-33,18],[-30,17],[-25,15],[-20,12],[-15,12],[-10,13],
-                    [-5,12],[0,10],[5,8],[8,5],[10,0],[12,-5],[15,-10],
-                    [18,-15],[20,-17],[22,-17],[25,-15],[28,-13],[30,-10],
-                    [32,-7],[34,-5],[36,-2],[37,-1]
-                ],
-                asia: [
-                    [42,30],[44,35],[46,40],[48,45],[50,50],[52,55],[54,60],
-                    [56,65],[58,70],[60,75],[62,80],[64,90],[66,100],[68,110],
-                    [70,120],[72,130],[72,140],[70,150],[68,160],[66,170],
-                    [64,178],[62,180],[60,178],[58,170],[56,160],[54,150],
-                    [52,140],[50,135],[48,140],[46,143],[44,145],[42,143],
-                    [40,140],[38,135],[36,130],[34,128],[32,130],[30,128],
-                    [28,125],[26,120],[24,118],[22,115],[20,110],[18,108],
-                    [16,108],[14,108],[12,108],[10,106],[8,104],[6,103],
-                    [4,103],[2,104],[0,105],[-2,106],[-4,108],[-6,110],
-                    [-8,115],[-8,120],[-6,122],[-4,120],[-2,118],[0,115],
-                    [2,112],[4,110],[6,108],[8,106],[10,104],[12,102],
-                    [14,100],[16,98],[18,96],[20,94],[22,92],[24,90],
-                    [26,88],[28,86],[30,84],[32,80],[34,76],[36,72],
-                    [38,68],[40,64],[42,60],[44,55],[46,50],[48,45],
-                    [50,40],[52,38],[54,36],[56,35],[58,35],[60,35],
-                    [62,38],[64,42],[66,48],[68,55],[70,60],[71,65],
-                    [70,70],[68,70],[66,65],[64,60],[62,55],[60,50],
-                    [58,48],[56,48],[54,50],[52,50],[50,48],[48,45],
-                    [46,42],[44,40],[42,38],[42,30]
-                ],
-                australia: [
-                    [-12,132],[-12,136],[-14,137],[-15,141],[-16,146],
-                    [-18,146],[-20,149],[-22,150],[-24,152],[-26,153],
-                    [-28,153],[-30,153],[-32,152],[-34,151],[-36,150],
-                    [-38,148],[-38,145],[-37,141],[-36,138],[-35,137],
-                    [-34,136],[-33,134],[-32,133],[-32,130],[-33,126],
-                    [-34,122],[-34,118],[-33,115],[-32,115],[-30,115],
-                    [-28,114],[-26,113],[-24,113],[-22,114],[-20,116],
-                    [-18,119],[-16,122],[-15,125],[-14,127],[-13,130],[-12,132]
-                ]
-            };
+            // Add subtle ambient and directional light for the texture
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+            scene.add(ambientLight);
+            const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            dirLight.position.set(5, 3, 5);
+            scene.add(dirLight);
 
-            function latLonToVector3(lat, lon, radius) {
-                const phi = (90 - lat) * (Math.PI / 180);
-                const theta = (lon + 180) * (Math.PI / 180);
-                const x = -(radius * Math.sin(phi) * Math.cos(theta));
-                const y = radius * Math.cos(phi);
-                const z = radius * Math.sin(phi) * Math.sin(theta);
-                return new THREE.Vector3(x, y, z);
-            }
-
-            const continentGroup = new THREE.Group();
-            const continentMat = new THREE.LineBasicMaterial({ 
-                color: 0xFFD700, transparent: true, opacity: 0.9, linewidth: 2
-            });
-
-            Object.values(continentData).forEach(coords => {
-                const points = coords.map(c => latLonToVector3(c[0], c[1], EARTH_RADIUS + 0.008));
-                const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
-                const line = new THREE.Line(lineGeo, continentMat);
-                continentGroup.add(line);
-            });
-            scene.add(continentGroup);
-
-            // 3. Orbiting Ring
+            // 2. Orbiting Ring
             const ringGeo = new THREE.RingGeometry(2.3, 2.33, 64);
             const ringMat = new THREE.MeshBasicMaterial({ color: 0x00e5ff, side: THREE.DoubleSide, transparent: true, opacity: 0.4 });
             const ring = new THREE.Mesh(ringGeo, ringMat);
             ring.rotation.x = Math.PI / 3;
             scene.add(ring);
 
-            // 4. Detailed Satellite
+            // 3. Detailed Satellite
             const satelliteGroup = new THREE.Group();
             const bodyGeo = new THREE.BoxGeometry(0.12, 0.12, 0.12);
             const bodyMat = new THREE.MeshBasicMaterial({ color: 0xFFD700 });
@@ -525,7 +395,7 @@
             satelliteGroup.add(antenna);
             scene.add(satelliteGroup);
 
-            // 5. Scanning Beam
+            // 4. Scanning Beam
             const lineMat = new THREE.LineBasicMaterial({ color: 0x00e5ff, transparent: true, opacity: 0.8 });
             const lineGeo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,0,0), new THREE.Vector3(0,0,0)]);
             const rayLine = new THREE.Line(lineGeo, lineMat);
@@ -537,7 +407,6 @@
                 angle += 0.008;
 
                 globe.rotation.y += 0.0015;
-                continentGroup.rotation.y += 0.0015;
 
                 const satX = Math.cos(angle) * 2.3;
                 const satZ = Math.sin(angle) * 2.3 * Math.cos(Math.PI / 3);
