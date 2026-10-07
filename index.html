@@ -8,9 +8,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         :root {
-            --bg-purple: #0f071a;
+            --bg-purple: #0a0714;
             --bg-white: #ffffff;
-            --card-purple: #1f1135;
+            --card-purple: #1a102e;
             --card-white: #f8f9fa;
             --accent-cyan: #00e5ff;
             --accent-blue: #00BFFF;
@@ -35,7 +35,7 @@
         /* HEADER */
         header {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 18px 5%; background: rgba(15, 7, 26, 0.95); backdrop-filter: blur(10px);
+            padding: 18px 5%; background: rgba(10, 7, 20, 0.95); backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-purple); position: sticky; top: 0; z-index: 1000;
         }
         .logo { font-size: 1.8rem; font-weight: 900; letter-spacing: 1px; text-decoration: none; }
@@ -50,7 +50,7 @@
         /* HERO WITH 3D CANVAS OVERLAY */
         .hero-container {
             position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: center;
-            padding: 60px 5%; text-align: center; background: radial-gradient(circle at center, #1f1135 0%, #0f071a 100%);
+            padding: 60px 5%; text-align: center; background: radial-gradient(circle at center, #1a102e 0%, #0a0714 100%);
         }
         #canvas-3d {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.85;
@@ -60,11 +60,11 @@
         .badge {
             display: inline-block; padding: 8px 20px; background: rgba(0, 191, 255, 0.15);
             border: 2px solid var(--accent-blue); color: var(--accent-blue);
-            border-radius: 25px; font-size: 0.85rem; font-weight: 800; letter-spacing: 1px;
+            border-radius: 25px; font-size: 0.85rem; font-weight: 800; letter-spacing: 1.5px;
             margin-bottom: 22px; text-transform: uppercase; box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
         }
         .hero h1 {
-            font-size: 2.4rem; font-weight: 900; line-height: 1.1; margin-bottom: 15px;
+            font-size: 2.6rem; font-weight: 900; line-height: 1.1; margin-bottom: 15px;
             background: linear-gradient(135deg, #FFD700 0%, #FFA500 30%, #FFD700 50%, #FFA500 70%, #FFD700 100%);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
             letter-spacing: -0.5px;
@@ -73,7 +73,7 @@
             font-size: 1.3rem; color: var(--accent-cyan); margin-bottom: 15px; font-weight: 700;
         }
         .hero-intro {
-            font-size: 1.1rem; color: var(--text-primary); margin-bottom: 30px; max-width: 900px;
+            font-size: 1.15rem; color: var(--text-primary); margin-bottom: 30px; max-width: 900px;
             margin-left: auto; margin-right: auto; line-height: 1.6; font-weight: 500;
         }
         
@@ -88,11 +88,6 @@
         .btn-wa:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5); }
         .btn-secondary { background: transparent; color: var(--accent-blue); border: 2px solid var(--accent-blue); }
         .btn-secondary:hover { background: rgba(0, 191, 255, 0.15); transform: translateY(-3px); }
-        .btn-gold {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            color: #1a1a2e; border: 2px solid var(--accent-gold);
-        }
-        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4); }
 
         /* STATS BAR */
         .stats-row {
@@ -108,9 +103,9 @@
         }
         .stat-label { font-size: 0.85rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
 
-        /* SECTIONS WITH TILT CARDS */
+        /* SECTIONS */
         .section-white { padding: 70px 5%; max-width: 1200px; margin: 0 auto; background: var(--bg-white); color: var(--text-dark); }
-        .section-purple { padding: 70px 5%; max-width: 1200px; margin: 0 auto; background: linear-gradient(180deg, #0f071a 0%, #1f1135 100%); color: var(--text-primary); }
+        .section-purple { padding: 70px 5%; max-width: 1200px; margin: 0 auto; background: linear-gradient(180deg, #0a0714 0%, #1a102e 100%); color: var(--text-primary); }
         
         .section-title { text-align: center; font-size: 2.1rem; font-weight: 900; margin-bottom: 12px; letter-spacing: -0.3px; }
         .section-white .section-title { color: var(--text-dark); }
@@ -122,7 +117,7 @@
         .section-white .section-subtitle { color: var(--text-muted); }
         .section-purple .section-subtitle { color: var(--text-secondary); }
 
-        /* GRIDS & SPATIAL HOVER EFFECT */
+        /* GRIDS & CARDS */
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 22px; }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
         .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
@@ -148,7 +143,7 @@
 
         /* TIERS */
         .tier-box {
-            background: #2a1b4e; border: 1px solid #3d2a6e;
+            background: #22153d; border: 1px solid #3d2a6e;
             border-left: 4px solid var(--accent-cyan); padding: 20px; margin-bottom: 15px; border-radius: 8px;
             transition: transform 0.2s;
         }
@@ -167,7 +162,7 @@
         .product-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.55; margin-bottom: 14px; }
         
         .product-card.highlight {
-            background: #2a1b4e; border-color: var(--accent-purple);
+            background: #22153d; border-color: var(--accent-purple);
             box-shadow: 0 10px 30px rgba(168, 85, 247, 0.25);
         }
         .product-card.highlight h3 { color: var(--accent-purple); }
@@ -211,13 +206,13 @@
             font-size: 0.9rem; font-weight: 800;
         }
 
-        /* CONTACT & TAGLINE (HIGH VISIBILITY) */
+        /* CONTACT & TAGLINE */
         .mission-statement {
             text-align: center; font-size: 1.4rem; font-weight: 900; color: var(--accent-blue);
             margin: 35px auto 20px; max-width: 800px; line-height: 1.4;
         }
         .tagline-final {
-            text-align: center; font-size: 1.25rem; font-weight: 900; letter-spacing: 1px; 
+            text-align: center; font-size: 1.3rem; font-weight: 900; letter-spacing: 1px; 
             color: var(--text-dark); text-transform: uppercase; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.5;
         }
         .tagline-final .gold { color: var(--accent-gold-dark); }
@@ -259,13 +254,14 @@
             header { flex-direction: column; gap: 12px; padding: 14px 5%; }
             nav a { margin: 0 8px; font-size: 0.9rem; }
             .hero-container { padding: 40px 5% 30px; min-height: auto; }
-            .hero h1 { font-size: 1.6rem; }
+            .hero h1 { font-size: 1.8rem; }
             .hero-sub { font-size: 1.1rem; }
             .section-title { font-size: 1.7rem; }
             .btn { padding: 12px 22px; font-size: 0.95rem; }
             .stat-number { font-size: 1.8rem; }
             .contact-box h3 { font-size: 1.5rem; }
             .contact-box .phone { font-size: 1.2rem; }
+            .tagline-final { font-size: 1.05rem; }
         }
     </style>
 </head>
