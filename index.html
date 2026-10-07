@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEORIXA® — AI × Satellite × Earth Intelligence</title>
-    <!-- Three.js CDN for Interactive 3D Orbit Globe -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         :root {
@@ -32,7 +31,6 @@
         html { scroll-behavior: smooth; }
         body { background-color: var(--bg-purple); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
 
-        /* HEADER */
         header {
             display: flex; justify-content: space-between; align-items: center;
             padding: 18px 5%; background: rgba(10, 7, 20, 0.95); backdrop-filter: blur(10px);
@@ -47,13 +45,12 @@
         nav a { color: var(--text-primary); text-decoration: none; margin-left: 22px; font-size: 0.95rem; font-weight: 600; transition: color 0.2s; }
         nav a:hover { color: var(--accent-blue); }
 
-        /* HERO WITH 3D CANVAS OVERLAY */
         .hero-container {
             position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: center;
             padding: 60px 5%; text-align: center; background: radial-gradient(circle at center, #1a102e 0%, #0a0714 100%);
         }
         #canvas-3d {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.85;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.9;
         }
         .hero-content { position: relative; z-index: 2; max-width: 1050px; margin: 0 auto; }
         
@@ -77,7 +74,6 @@
             margin-left: auto; margin-right: auto; line-height: 1.6; font-weight: 500;
         }
         
-        /* CTAs */
         .cta-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         .btn {
             display: inline-flex; align-items: center; justify-content: center;
@@ -89,7 +85,6 @@
         .btn-secondary { background: transparent; color: var(--accent-blue); border: 2px solid var(--accent-blue); }
         .btn-secondary:hover { background: rgba(0, 191, 255, 0.15); transform: translateY(-3px); }
 
-        /* STATS BAR */
         .stats-row {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 20px; max-width: 1100px; margin: 0 auto; padding: 40px 5%;
@@ -103,7 +98,6 @@
         }
         .stat-label { font-size: 0.85rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
 
-        /* SECTIONS */
         .section-white { padding: 70px 5%; max-width: 1200px; margin: 0 auto; background: var(--bg-white); color: var(--text-dark); }
         .section-purple { padding: 70px 5%; max-width: 1200px; margin: 0 auto; background: linear-gradient(180deg, #0a0714 0%, #1a102e 100%); color: var(--text-primary); }
         
@@ -117,7 +111,6 @@
         .section-white .section-subtitle { color: var(--text-muted); }
         .section-purple .section-subtitle { color: var(--text-secondary); }
 
-        /* GRIDS & CARDS */
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 22px; }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
         .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
@@ -125,9 +118,8 @@
 
         .card {
             padding: 28px; border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;
-            perspective: 1000px; transform-style: preserve-3d;
         }
-        .card:hover { transform: translateY(-5px) rotateX(2deg) rotateY(-2deg); }
+        .card:hover { transform: translateY(-5px); }
         .card h3 { margin-bottom: 10px; font-size: 1.25rem; font-weight: 800; }
         .card p { font-size: 0.95rem; line-height: 1.6; }
 
@@ -141,7 +133,6 @@
         .section-purple .card h3 { color: var(--accent-blue); }
         .section-purple .card p { color: var(--text-secondary); }
 
-        /* TIERS */
         .tier-box {
             background: #22153d; border: 1px solid #3d2a6e;
             border-left: 4px solid var(--accent-cyan); padding: 20px; margin-bottom: 15px; border-radius: 8px;
@@ -151,7 +142,6 @@
         .tier-title { font-weight: 800; color: #FFFFFF; font-size: 1rem; letter-spacing: 1px; }
         .tier-desc { color: #f3f4f6; font-size: 0.95rem; margin-top: 6px; font-weight: 500; }
 
-        /* PRODUCTS */
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-bottom: 25px; }
         .product-card {
             background: var(--card-purple); border: 2px solid var(--border-purple);
@@ -178,7 +168,6 @@
         .badge-pilot { background: rgba(50, 205, 50, 0.18); color: var(--accent-lime); border: 1px solid var(--accent-lime); }
         .badge-soon { background: rgba(0, 191, 255, 0.18); color: var(--accent-blue); border: 1px solid var(--accent-blue); }
 
-        /* HOW IT WORKS */
         .step-card {
             background: var(--card-white); border: 1px solid var(--border-white);
             padding: 28px 24px; border-radius: 12px; position: relative; transition: transform 0.3s;
@@ -192,7 +181,6 @@
         .step-card h3 { color: var(--accent-blue); font-size: 1.15rem; margin-bottom: 10px; font-weight: 800; }
         .step-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.55; }
 
-        /* MINERALS */
         .mineral-category { background: var(--card-white); border: 1px solid var(--border-white); padding: 22px; border-radius: 12px; }
         .mineral-category h4 {
             color: var(--accent-blue); border-bottom: 1px solid var(--border-white);
@@ -206,7 +194,6 @@
             font-size: 0.9rem; font-weight: 800;
         }
 
-        /* CONTACT & TAGLINE */
         .mission-statement {
             text-align: center; font-size: 1.4rem; font-weight: 900; color: var(--accent-blue);
             margin: 35px auto 20px; max-width: 800px; line-height: 1.4;
@@ -231,7 +218,6 @@
         .contact-box p { color: var(--text-muted); margin-bottom: 25px; font-size: 1.1rem; font-weight: 600; }
         .contact-box .phone { color: var(--text-dark); font-weight: 900; font-size: 1.4rem; }
 
-        /* FLOATING WHATSAPP */
         .whatsapp-float {
             position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
             background-color: var(--btn-wa); color: #fff; border-radius: 50%;
@@ -277,7 +263,6 @@
         </nav>
     </header>
 
-    <!-- HERO SECTION WITH 3D ORBIT & RAYS -->
     <div id="home" class="hero-container">
         <canvas id="canvas-3d"></canvas>
         <div class="hero-content">
@@ -293,229 +278,90 @@
         </div>
     </div>
 
-    <!-- STATS -->
     <div class="stats-row">
-        <div class="stat-item">
-            <div class="stat-number">5</div>
-            <div class="stat-label">Layer Fusion Framework</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">30+</div>
-            <div class="stat-label">Target Minerals</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">6</div>
-            <div class="stat-label">Days Delivery Time</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">🇳🇬</div>
-            <div class="stat-label">Nigeria Field Network</div>
-        </div>
+        <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">Layer Fusion Framework</div></div>
+        <div class="stat-item"><div class="stat-number">30+</div><div class="stat-label">Target Minerals</div></div>
+        <div class="stat-item"><div class="stat-number">6</div><div class="stat-label">Days Delivery Time</div></div>
+        <div class="stat-item"><div class="stat-number">🇳🇬</div><div class="stat-label">Nigeria Field Network</div></div>
     </div>
 
-    <!-- MULTI-SCALE FRAMEWORK (WHITE) -->
     <section id="framework" class="section-white">
         <h2 class="section-title">Multi-Scale Target Prediction Framework</h2>
         <p class="section-subtitle">Four operational tiers — from continental screening to ground-truth validation.</p>
         <div style="max-width: 900px; margin: 0 auto;">
-            <div class="tier-box">
-                <div class="tier-title">1. SPACEBORNE TIER</div>
-                <div class="tier-desc">Regional advanced satellite imaging screening across broad regions and licence blocks to identify mineralogical anomalies.</div>
-            </div>
-            <div class="tier-box">
-                <div class="tier-title">2. AIRBORNE GEOPHYSICS TIER</div>
-                <div class="tier-desc">Integration of client-provided and publicly available or commercial airborne magnetic, gravimetric and radiometric datasets capturing shallow to deep basement structures, outcrops, intrusives, and density contrasts.</div>
-            </div>
-            <div class="tier-box">
-                <div class="tier-title">3. UAV TIER (PLANNED CAPABILITY)</div>
-                <div class="tier-desc">Integration of ultra-high-resolution drone datasets for localized outcrop mapping, drill-targeting, and camp-scale vectoring.</div>
-            </div>
-            <div class="tier-box">
-                <div class="tier-title">4. GROUND-TRUTH TIER</div>
-                <div class="tier-desc">Regional network of field geologists and field teams.</div>
-            </div>
+            <div class="tier-box"><div class="tier-title">1. SPACEBORNE TIER</div><div class="tier-desc">Regional advanced satellite imaging screening across broad regions and licence blocks to identify mineralogical anomalies.</div></div>
+            <div class="tier-box"><div class="tier-title">2. AIRBORNE GEOPHYSICS TIER</div><div class="tier-desc">Integration of client-provided and publicly available or commercial airborne magnetic, gravimetric and radiometric datasets capturing shallow to deep basement structures, outcrops, intrusives, and density contrasts.</div></div>
+            <div class="tier-box"><div class="tier-title">3. UAV TIER (PLANNED CAPABILITY)</div><div class="tier-desc">Integration of ultra-high-resolution drone datasets for localized outcrop mapping, drill-targeting, and camp-scale vectoring.</div></div>
+            <div class="tier-box"><div class="tier-title">4. GROUND-TRUTH TIER</div><div class="tier-desc">Regional network of field geologists and field teams.</div></div>
         </div>
     </section>
 
-    <!-- 5-LAYER FUSION FRAMEWORK (PURPLE) -->
     <section class="section-purple">
         <h2 class="section-title">One Platform. Multiple Intelligence Layers.</h2>
         <p class="section-subtitle">Independent evidence dimensions, synthesized by our AI System.</p>
         <div class="grid-5">
-            <div class="card">
-                <h3>1. Satellites</h3>
-                <p>Advanced satellite imaging capturing critical geological and mineralogical data.</p>
-            </div>
-            <div class="card">
-                <h3>2. Geophysics</h3>
-                <p>Magnetics, radiometrics, and gravity mapping fault lines and intrusive bodies.</p>
-            </div>
-            <div class="card">
-                <h3>3. Geochemistry</h3>
-                <p>Rock, soil, and stream sediment assays with pathfinder element dispersion modeling.</p>
-            </div>
-            <div class="card">
-                <h3>4. Geostructure</h3>
-                <p>Elevation models, ridge lineaments, fault corridors, and intrusive morphology.</p>
-            </div>
-            <div class="card" style="border-color: var(--accent-gold);">
-                <h3 style="color: var(--accent-gold);">5. AI System</h3>
-                <p>Fuses and synthesizes the 4-layer multi-dimensional data inputs to output high-probability ranked targets.</p>
-            </div>
+            <div class="card"><h3>1. Satellites</h3><p>Advanced satellite imaging capturing critical geological and mineralogical data.</p></div>
+            <div class="card"><h3>2. Geophysics</h3><p>Magnetics, radiometrics, and gravity mapping fault lines and intrusive bodies.</p></div>
+            <div class="card"><h3>3. Geochemistry</h3><p>Rock, soil, and stream sediment assays with pathfinder element dispersion modeling.</p></div>
+            <div class="card"><h3>4. Geostructure</h3><p>Elevation models, ridge lineaments, fault corridors, and intrusive morphology.</p></div>
+            <div class="card" style="border-color: var(--accent-gold);"><h3 style="color: var(--accent-gold);">5. AI System</h3><p>Fuses and synthesizes the 4-layer multi-dimensional data inputs to output high-probability ranked targets.</p></div>
         </div>
     </section>
 
-    <!-- HOW IT WORKS (WHITE) -->
     <section class="section-white">
         <h2 class="section-title">How It Works</h2>
         <p class="section-subtitle">Four steps — from search space to target space.</p>
         <div class="grid-4">
-            <div class="step-card">
-                <div class="step-number">01</div>
-                <h3>Define the Target</h3>
-                <p>Share your licence or area of interest (AOI) as a KML, shapefile, boundary box coordinates, or map coordinates via WhatsApp or email, along with your target mineral family.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">02</div>
-                <h3>Physics-First Data Curation</h3>
-                <p>Our geospatial experts manually curate and validate high-fidelity orbital and geophysical data.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">03</div>
-                <h3>Expert-Guided AI Analysis</h3>
-                <p>Our 120+ algorithms, AI Agents, and AI-Stack detect specific minerals and cross-validate independent evidence layers to eliminate false positives and rank high-prospect targets.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">04</div>
-                <h3>Deliver the Evidence Ledger</h3>
-                <p>You receive an auditable, ranked report with high-prospect target clusters, coordinates, and georeferenced maps for field follow-up.</p>
-            </div>
+            <div class="step-card"><div class="step-number">01</div><h3>Define the Target</h3><p>Share your licence or area of interest (AOI) as a KML, shapefile, boundary box coordinates, or map coordinates via WhatsApp or email, along with your target mineral family.</p></div>
+            <div class="step-card"><div class="step-number">02</div><h3>Physics-First Data Curation</h3><p>Our geospatial experts manually curate and validate high-fidelity orbital and geophysical data.</p></div>
+            <div class="step-card"><div class="step-number">03</div><h3>Expert-Guided AI Analysis</h3><p>Our 120+ algorithms, AI Agents, and AI-Stack detect specific minerals and cross-validate independent evidence layers to eliminate false positives and rank high-prospect targets.</p></div>
+            <div class="step-card"><div class="step-number">04</div><h3>Deliver the Evidence Ledger</h3><p>You receive an auditable, ranked report with high-prospect target clusters, coordinates, and georeferenced maps for field follow-up.</p></div>
         </div>
     </section>
 
-    <!-- PRODUCTS (PURPLE) -->
     <section id="products" class="section-purple">
         <h2 class="section-title">GEORIXA Products & Platform</h2>
         <p class="section-subtitle">Outcome-driven AI systems and global mining asset marketplace.</p>
-
         <div class="product-grid">
-            <div class="product-card highlight">
-                <h3>OREFINDER AI</h3>
-                <p><strong>FIND.</strong> Specific mineral detection AI system. Identifies where your target minerals occur and ranks each location by confidence.</p>
-                <span class="badge-status badge-pilot">Pilot — Available on Request</span>
-            </div>
-            <div class="product-card highlight">
-                <h3>TARGETFINDER AI</h3>
-                <p><strong>PRIORITIZE.</strong> Licence and Area of Interest scanning AI system. Scans your area for a single mineral or full mineral family and delivers ranked prospective target reports.</p>
-                <span class="badge-status badge-pilot">Pilot — Available on Request</span>
-            </div>
-            <div class="product-card highlight">
-                <h3>GEOSNIPER AI</h3>
-                <p><strong>MAP.</strong> Regional and national morphological and lithological host-rock mapping AI. Narrows 10,000–100,000 km² to clusters of 1–10 km² high-prospect zones.</p>
-                <span class="badge-status badge-pilot">Pilot — Available on Request</span>
-            </div>
-            <div class="product-card coral">
-                <h3>GEOFINA AI</h3>
-                <p><strong>FINANCE.</strong> Economic ranking AI for mineral assets, integrated with MinePort — the global mining asset exchange.</p>
-                <span class="badge-status badge-soon">Coming Soon</span>
-            </div>
-            <div class="product-card purple-std" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
-                <h3>MINEPORT</h3>
-                <p><strong>EXCHANGE.</strong> The global mining asset exchange. List licences for sale, match with buyers and investors, and access economic ranking for mineral assets.</p>
-                <span class="badge-status badge-soon">Coming Soon</span>
-            </div>
+            <div class="product-card highlight"><h3>OREFINDER AI</h3><p><strong>FIND.</strong> Specific mineral detection AI system. Identifies where your target minerals occur and ranks each location by confidence.</p><span class="badge-status badge-pilot">Pilot — Available on Request</span></div>
+            <div class="product-card highlight"><h3>TARGETFINDER AI</h3><p><strong>PRIORITIZE.</strong> Licence and Area of Interest scanning AI system. Scans your area for a single mineral or full mineral family and delivers ranked prospective target reports.</p><span class="badge-status badge-pilot">Pilot — Available on Request</span></div>
+            <div class="product-card highlight"><h3>GEOSNIPER AI</h3><p><strong>MAP.</strong> Regional and national morphological and lithological host-rock mapping AI. Narrows 10,000–100,000 km² to clusters of 1–10 km² high-prospect zones.</p><span class="badge-status badge-pilot">Pilot — Available on Request</span></div>
+            <div class="product-card coral"><h3>GEOFINA AI</h3><p><strong>FINANCE.</strong> Economic ranking AI for mineral assets, integrated with MinePort — the global mining asset exchange.</p><span class="badge-status badge-soon">Coming Soon</span></div>
+            <div class="product-card purple-std" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto;"><h3>MINEPORT</h3><p><strong>EXCHANGE.</strong> The global mining asset exchange. List licences for sale, match with buyers and investors, and access economic ranking for mineral assets.</p><span class="badge-status badge-soon">Coming Soon</span></div>
         </div>
-
-        <p style="text-align: center; color: var(--text-secondary); font-size: 1rem; max-width: 850px; margin: 20px auto 0; font-style: italic; font-weight: 500;">
-            Satellites, Geophysics, Geochemistry, Geostructure, and AI Fusion — delivering rapid, de-risked target detection and prediction across Africa's critical mineral frontier and global mining ecosystems.
-        </p>
+        <p style="text-align: center; color: var(--text-secondary); font-size: 1rem; max-width: 850px; margin: 20px auto 0; font-style: italic; font-weight: 500;">Satellites, Geophysics, Geochemistry, Geostructure, and AI Fusion — delivering rapid, de-risked target detection and prediction across Africa's critical mineral frontier and global mining ecosystems.</p>
     </section>
 
-    <!-- MINERALS (WHITE) -->
     <section id="minerals" class="section-white">
         <h2 class="section-title">Target Mineral Systems</h2>
         <p class="section-subtitle">Multi-sensor spectral, geophysical, and geochemical prediction capabilities across major mineral groups.</p>
-
         <div class="grid-3">
-            <div class="mineral-category">
-                <h4>Lithium Minerals</h4>
-                <div class="mineral-tags">
-                    <span class="mineral-tag">Spodumene</span><span class="mineral-tag">Lepidolite</span><span class="mineral-tag">Petalite</span><span class="mineral-tag">Amblygonite</span><span class="mineral-tag">Hectorite</span>
-                </div>
-            </div>
-            <div class="mineral-category">
-                <h4>Gold & Precious Metals</h4>
-                <div class="mineral-tags">
-                    <span class="mineral-tag">Gold</span><span class="mineral-tag">Silver</span>
-                </div>
-            </div>
-            <div class="mineral-category">
-                <h4>Copper Minerals</h4>
-                <div class="mineral-tags">
-                    <span class="mineral-tag">Malachite</span><span class="mineral-tag">Azurite</span><span class="mineral-tag">Chrysocolla</span><span class="mineral-tag">Cuprite</span>
-                </div>
-            </div>
-            <div class="mineral-category">
-                <h4>REE Minerals</h4>
-                <div class="mineral-tags">
-                    <span class="mineral-tag">Monazite</span><span class="mineral-tag">Bastnäsite</span><span class="mineral-tag">Xenotime</span>
-                </div>
-            </div>
-            <div class="mineral-category">
-                <h4>Gemstones</h4>
-                <div class="mineral-tags">
-                    <span class="mineral-tag">Tourmaline</span><span class="mineral-tag">Garnet</span>
-                </div>
-            </div>
-            <div class="mineral-category">
-                <h4>Heavy Mineral Sands</h4>
-                <div class="mineral-tags">
-                    <span class="mineral-tag">Zircon Sand</span><span class="mineral-tag">Ilmenite</span>
-                </div>
-            </div>
-            <div class="mineral-category" style="grid-column: 1 / -1;">
-                <h4>Industrial Minerals</h4>
-                <div class="mineral-tags">
-                    <span class="mineral-tag">Kaolinite</span><span class="mineral-tag">Dolomite</span><span class="mineral-tag">Calcite</span><span class="mineral-tag">Hematite</span><span class="mineral-tag">Quartz</span><span class="mineral-tag">Feldspar</span><span class="mineral-tag">Aluminium Ores</span><span class="mineral-tag">Talc</span><span class="mineral-tag">Gypsum</span>
-                </div>
-            </div>
+            <div class="mineral-category"><h4>Lithium Minerals</h4><div class="mineral-tags"><span class="mineral-tag">Spodumene</span><span class="mineral-tag">Lepidolite</span><span class="mineral-tag">Petalite</span><span class="mineral-tag">Amblygonite</span><span class="mineral-tag">Hectorite</span></div></div>
+            <div class="mineral-category"><h4>Gold & Precious Metals</h4><div class="mineral-tags"><span class="mineral-tag">Gold</span><span class="mineral-tag">Silver</span></div></div>
+            <div class="mineral-category"><h4>Copper Minerals</h4><div class="mineral-tags"><span class="mineral-tag">Malachite</span><span class="mineral-tag">Azurite</span><span class="mineral-tag">Chrysocolla</span><span class="mineral-tag">Cuprite</span></div></div>
+            <div class="mineral-category"><h4>REE Minerals</h4><div class="mineral-tags"><span class="mineral-tag">Monazite</span><span class="mineral-tag">Bastnäsite</span><span class="mineral-tag">Xenotime</span></div></div>
+            <div class="mineral-category"><h4>Gemstones</h4><div class="mineral-tags"><span class="mineral-tag">Tourmaline</span><span class="mineral-tag">Garnet</span></div></div>
+            <div class="mineral-category"><h4>Heavy Mineral Sands</h4><div class="mineral-tags"><span class="mineral-tag">Zircon Sand</span><span class="mineral-tag">Ilmenite</span></div></div>
+            <div class="mineral-category" style="grid-column: 1 / -1;"><h4>Industrial Minerals</h4><div class="mineral-tags"><span class="mineral-tag">Kaolinite</span><span class="mineral-tag">Dolomite</span><span class="mineral-tag">Calcite</span><span class="mineral-tag">Hematite</span><span class="mineral-tag">Quartz</span><span class="mineral-tag">Feldspar</span><span class="mineral-tag">Aluminium Ores</span><span class="mineral-tag">Talc</span><span class="mineral-tag">Gypsum</span></div></div>
         </div>
     </section>
 
-    <!-- PARTNERSHIPS (PURPLE) -->
     <section class="section-purple">
         <h2 class="section-title">Partnerships, Investors & Affiliates</h2>
         <p class="section-subtitle">Collaborating with exploration operators, mining funds, and regional referral agents.</p>
-
         <div class="grid-3">
-            <div class="card">
-                <h3>For Licence Holders</h3>
-                <p>De-risk exploration budgets before committing capital to heavy drilling. We deliver target prediction KMZ matrices, coordinate packages, and high-confidence structural/spectral overlays.</p>
-            </div>
-            <div class="card">
-                <h3>For Investors & Funds</h3>
-                <p>Evaluate licence acquisition opportunities, audit existing geological assets, and conduct rapid technical due diligence on mineral properties prior to capital deployment.</p>
-            </div>
-            <div class="card" style="border-color: var(--accent-gold);">
-                <h3 style="color: var(--accent-gold);">For Affiliates</h3>
-                <p>Partner with GEORIXA to introduce mining companies and licence holders to our targeting ecosystem. Affiliates earn generous commissions for every successful client onboarding.</p>
-            </div>
+            <div class="card"><h3>For Licence Holders</h3><p>De-risk exploration budgets before committing capital to heavy drilling. We deliver target prediction KMZ matrices, coordinate packages, and high-confidence structural/spectral overlays.</p></div>
+            <div class="card"><h3>For Investors & Funds</h3><p>Evaluate licence acquisition opportunities, audit existing geological assets, and conduct rapid technical due diligence on mineral properties prior to capital deployment.</p></div>
+            <div class="card" style="border-color: var(--accent-gold);"><h3 style="color: var(--accent-gold);">For Affiliates</h3><p>Partner with GEORIXA to introduce mining companies and licence holders to our targeting ecosystem. Affiliates earn generous commissions for every successful client onboarding.</p></div>
         </div>
     </section>
 
-    <!-- CONTACT (WHITE) -->
     <section id="contact" class="section-white">
         <h2 class="section-title">Contact the GEORIXA Team</h2>
         <p class="section-subtitle">Request an AOI scan, strategic partnership opportunities, or join our Affiliate Program.</p>
-
         <p class="mission-statement">Built in partnership with miners, for the global mining ecosystem.</p>
-        
-        <div class="tagline-final">
-            GEORIXA FINDS. ENGINEER DECIDES. GEOLOGIST CONFIRMS. DRILLING QUANTIFIES.
-        </div>
-
+        <div class="tagline-final">GEORIXA FINDS. ENGINEER DECIDES. GEOLOGIST CONFIRMS. DRILLING QUANTIFIES.</div>
         <p class="disclaimer-text">GEORIXA intelligence supports early-stage exploration targeting and de-risking. Our orbital and AI-derived insights are designed to guide and prioritize field validation. They do not replace independent geological mapping, drilling, or formal resource estimation standards (e.g., JORC, NI 43-101, or SAMREC).</p>
-
         <div class="contact-box">
             <h3>Connect with GEORIXA Team</h3>
             <p>Call or WhatsApp: <span class="phone">+234 803 289 3111</span></p>
@@ -525,16 +371,11 @@
     </section>
 
     <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%20Team,%20I%20want%20to%20scan%20my%20Area%20of%20Interest." class="whatsapp-float" target="_blank">
-        <svg style="width:32px;height:32px;fill:white;" viewBox="0 0 24 24">
-            <path d="M12.031 0c-6.627 0-12 5.373-12 12 0 2.159.57 4.26 1.652 6.121l-1.683 6.148 6.291-1.65c1.802.983 3.839 1.501 5.922 1.501 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/>
-        </svg>
+        <svg style="width:32px;height:32px;fill:white;" viewBox="0 0 24 24"><path d="M12.031 0c-6.627 0-12 5.373-12 12 0 2.159.57 4.26 1.652 6.121l-1.683 6.148 6.291-1.65c1.802.983 3.839 1.501 5.922 1.501 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/></svg>
     </a>
 
-    <footer>
-        © 2026 GEORIXA® Earth Intelligence. All rights reserved. | Official Nigeria Mining Week Showcase
-    </footer>
+    <footer>© 2026 GEORIXA® Earth Intelligence. All rights reserved. | Official Nigeria Mining Week Showcase</footer>
 
-    <!-- INTERACTIVE 3D GLOBE & DETAILED SATELLITE SCRIPT -->
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('canvas-3d');
@@ -542,63 +383,157 @@
 
             const scene = new THREE.Scene();
             const camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 1000);
-            camera.position.z = 4.2;
+            camera.position.z = 4.5;
 
             const renderer = new THREE.WebGLRenderer({ canvas: container, alpha: true, antialias: true });
             renderer.setSize(container.clientWidth, container.clientHeight);
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-            // Wireframe Earth Sphere
-            const globeGeo = new THREE.SphereGeometry(1.8, 28, 28);
+            const EARTH_RADIUS = 1.8;
+
+            // 1. Wireframe Earth Sphere (cyan)
+            const globeGeo = new THREE.SphereGeometry(EARTH_RADIUS, 32, 32);
             const globeMat = new THREE.MeshBasicMaterial({
-                color: 0x00BFFF,
-                wireframe: true,
-                transparent: true,
-                opacity: 0.25
+                color: 0x00BFFF, wireframe: true, transparent: true, opacity: 0.18
             });
             const globe = new THREE.Mesh(globeGeo, globeMat);
             scene.add(globe);
 
-            // Orbiting Ring (Satellite Beam Path)
+            // 2. CONTINENT OUTLINES (Gold lines on sphere surface)
+            // Simplified continent coordinates [lat, lon] - recognizable shapes
+            const continentData = {
+                // North America
+                northAmerica: [
+                    [70,-165],[72,-130],[72,-100],[70,-80],[65,-65],[60,-65],[55,-60],
+                    [50,-55],[47,-53],[45,-60],[43,-65],[45,-75],[42,-80],[38,-77],
+                    [35,-76],[32,-80],[30,-82],[28,-83],[25,-80],[25,-90],[28,-95],
+                    [30,-97],[32,-105],[30,-110],[32,-117],[35,-120],[40,-124],
+                    [45,-125],[50,-128],[55,-132],[58,-137],[60,-147],[62,-165],[65,-168],[70,-165]
+                ],
+                // South America
+                southAmerica: [
+                    [12,-72],[10,-75],[8,-78],[5,-80],[2,-80],[-2,-80],[-5,-81],
+                    [-8,-78],[-12,-77],[-15,-75],[-18,-70],[-22,-65],[-25,-58],
+                    [-30,-52],[-33,-52],[-38,-57],[-42,-63],[-46,-67],[-50,-73],
+                    [-53,-72],[-55,-68],[-55,-65],[-52,-70],[-48,-75],[-43,-80],
+                    [-38,-73],[-33,-72],[-28,-70],[-22,-70],[-17,-72],[-12,-77],
+                    [-7,-80],[-3,-80],[0,-80],[3,-77],[7,-75],[10,-73],[12,-72]
+                ],
+                // Europe
+                europe: [
+                    [36,-9],[38,-9],[40,-8],[43,-8],[44,-2],[46,-2],[48,-5],
+                    [50,-5],[52,-5],[54,-8],[56,-6],[58,-6],[60,-5],[62,-5],
+                    [64,-12],[66,-15],[68,-16],[70,-20],[71,-26],[71,-28],
+                    [70,-30],[68,-30],[65,-28],[62,-25],[60,-20],[58,-15],
+                    [56,-10],[55,-8],[54,-10],[52,-5],[50,0],[48,3],[46,5],
+                    [44,8],[42,10],[40,12],[38,15],[37,22],[38,26],[40,28],
+                    [42,30],[44,32],[46,30],[48,28],[50,25],[52,22],[54,20],
+                    [56,22],[58,25],[60,25],[62,28],[64,30],[66,28],[68,26],
+                    [70,28],[71,30],[70,32],[68,32],[65,30],[62,28],[60,25],
+                    [58,22],[56,20],[54,18],[52,15],[50,12],[48,10],[46,8],
+                    [44,5],[42,3],[40,0],[38,-2],[36,-5],[36,-9]
+                ],
+                // Africa
+                africa: [
+                    [37,-1],[36,10],[35,12],[33,12],[32,25],[31,32],[30,33],
+                    [28,34],[25,35],[22,37],[18,40],[15,42],[12,44],[10,45],
+                    [8,48],[5,47],[2,45],[0,42],[-3,41],[-6,40],[-10,40],
+                    [-15,41],[-20,43],[-25,35],[-30,31],[-34,26],[-34,20],
+                    [-33,18],[-30,17],[-25,15],[-20,12],[-15,12],[-10,13],
+                    [-5,12],[0,10],[5,8],[8,5],[10,0],[12,-5],[15,-10],
+                    [18,-15],[20,-17],[22,-17],[25,-15],[28,-13],[30,-10],
+                    [32,-7],[34,-5],[36,-2],[37,-1]
+                ],
+                // Asia (simplified)
+                asia: [
+                    [42,30],[44,35],[46,40],[48,45],[50,50],[52,55],[54,60],
+                    [56,65],[58,70],[60,75],[62,80],[64,90],[66,100],[68,110],
+                    [70,120],[72,130],[72,140],[70,150],[68,160],[66,170],
+                    [64,178],[62,180],[60,178],[58,170],[56,160],[54,150],
+                    [52,140],[50,135],[48,140],[46,143],[44,145],[42,143],
+                    [40,140],[38,135],[36,130],[34,128],[32,130],[30,128],
+                    [28,125],[26,120],[24,118],[22,115],[20,110],[18,108],
+                    [16,108],[14,108],[12,108],[10,106],[8,104],[6,103],
+                    [4,103],[2,104],[0,105],[-2,106],[-4,108],[-6,110],
+                    [-8,115],[-8,120],[-6,122],[-4,120],[-2,118],[0,115],
+                    [2,112],[4,110],[6,108],[8,106],[10,104],[12,102],
+                    [14,100],[16,98],[18,96],[20,94],[22,92],[24,90],
+                    [26,88],[28,86],[30,84],[32,80],[34,76],[36,72],
+                    [38,68],[40,64],[42,60],[44,55],[46,50],[48,45],
+                    [50,40],[52,38],[54,36],[56,35],[58,35],[60,35],
+                    [62,38],[64,42],[66,48],[68,55],[70,60],[71,65],
+                    [70,70],[68,70],[66,65],[64,60],[62,55],[60,50],
+                    [58,48],[56,48],[54,50],[52,50],[50,48],[48,45],
+                    [46,42],[44,40],[42,38],[42,30]
+                ],
+                // Australia
+                australia: [
+                    [-12,132],[-12,136],[-14,137],[-15,141],[-16,146],
+                    [-18,146],[-20,149],[-22,150],[-24,152],[-26,153],
+                    [-28,153],[-30,153],[-32,152],[-34,151],[-36,150],
+                    [-38,148],[-38,145],[-37,141],[-36,138],[-35,137],
+                    [-34,136],[-33,134],[-32,133],[-32,130],[-33,126],
+                    [-34,122],[-34,118],[-33,115],[-32,115],[-30,115],
+                    [-28,114],[-26,113],[-24,113],[-22,114],[-20,116],
+                    [-18,119],[-16,122],[-15,125],[-14,127],[-13,130],[-12,132]
+                ]
+            };
+
+            // Convert lat/lon to 3D sphere coordinates
+            function latLonToVector3(lat, lon, radius) {
+                const phi = (90 - lat) * (Math.PI / 180);
+                const theta = (lon + 180) * (Math.PI / 180);
+                const x = -(radius * Math.sin(phi) * Math.cos(theta));
+                const y = radius * Math.cos(phi);
+                const z = radius * Math.sin(phi) * Math.sin(theta);
+                return new THREE.Vector3(x, y, z);
+            }
+
+            // Create continent line group
+            const continentGroup = new THREE.Group();
+            const continentMat = new THREE.LineBasicMaterial({ 
+                color: 0xFFD700, transparent: true, opacity: 0.85 
+            });
+
+            Object.values(continentData).forEach(coords => {
+                const points = coords.map(c => latLonToVector3(c[0], c[1], EARTH_RADIUS + 0.005));
+                const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
+                const line = new THREE.Line(lineGeo, continentMat);
+                continentGroup.add(line);
+            });
+            scene.add(continentGroup);
+
+            // 3. Orbiting Ring
             const ringGeo = new THREE.RingGeometry(2.3, 2.33, 64);
             const ringMat = new THREE.MeshBasicMaterial({ color: 0x00e5ff, side: THREE.DoubleSide, transparent: true, opacity: 0.4 });
             const ring = new THREE.Mesh(ringGeo, ringMat);
             ring.rotation.x = Math.PI / 3;
             scene.add(ring);
 
-            // --- DETAILED SATELLITE MODEL ---
+            // 4. Detailed Satellite
             const satelliteGroup = new THREE.Group();
-
-            // 1. Main Body (Gold Box)
             const bodyGeo = new THREE.BoxGeometry(0.12, 0.12, 0.12);
             const bodyMat = new THREE.MeshBasicMaterial({ color: 0xFFD700 });
-            const body = new THREE.Mesh(bodyGeo, bodyMat);
-            satelliteGroup.add(body);
+            satelliteGroup.add(new THREE.Mesh(bodyGeo, bodyMat));
 
-            // 2. Solar Panel Left (Blue)
             const panelGeo = new THREE.BoxGeometry(0.3, 0.15, 0.02);
             const panelMat = new THREE.MeshBasicMaterial({ color: 0x00BFFF });
             const panelLeft = new THREE.Mesh(panelGeo, panelMat);
             panelLeft.position.set(-0.22, 0, 0);
             satelliteGroup.add(panelLeft);
-
-            // 3. Solar Panel Right (Blue)
             const panelRight = new THREE.Mesh(panelGeo, panelMat);
             panelRight.position.set(0.22, 0, 0);
             satelliteGroup.add(panelRight);
 
-            // 4. Antenna (White Cone pointing toward Earth)
             const antennaGeo = new THREE.ConeGeometry(0.04, 0.08, 8);
             const antennaMat = new THREE.MeshBasicMaterial({ color: 0xFFFFFF });
             const antenna = new THREE.Mesh(antennaGeo, antennaMat);
             antenna.rotation.x = Math.PI / 2; 
             antenna.position.set(0, 0, -0.1);
             satelliteGroup.add(antenna);
-
             scene.add(satelliteGroup);
-            // --------------------------------
 
-            // Glowing Ray Beam Line
+            // 5. Scanning Beam
             const lineMat = new THREE.LineBasicMaterial({ color: 0x00e5ff, transparent: true, opacity: 0.8 });
             const lineGeo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,0,0), new THREE.Vector3(0,0,0)]);
             const rayLine = new THREE.Line(lineGeo, lineMat);
@@ -609,18 +544,16 @@
                 requestAnimationFrame(animate);
                 angle += 0.008;
 
-                globe.rotation.y += 0.002;
+                globe.rotation.y += 0.0015;
+                continentGroup.rotation.y += 0.0015;
 
-                // Move Satellite along ring
                 const satX = Math.cos(angle) * 2.3;
                 const satZ = Math.sin(angle) * 2.3 * Math.cos(Math.PI / 3);
                 const satY = Math.sin(angle) * 2.3 * Math.sin(Math.PI / 3);
                 
-                // Update satellite position and make it look at Earth
                 satelliteGroup.position.set(satX, satY, satZ);
                 satelliteGroup.lookAt(0, 0, 0);
 
-                // Beam Ray from Satellite to Earth Center Target
                 const points = [
                     new THREE.Vector3(satX, satY, satZ),
                     new THREE.Vector3(satX * 0.4, satY * 0.4, satZ * 0.4)
