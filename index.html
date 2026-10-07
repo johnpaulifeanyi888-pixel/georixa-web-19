@@ -399,18 +399,16 @@
             const globe = new THREE.Mesh(globeGeo, globeMat);
             scene.add(globe);
 
-            // 2. CONTINENT OUTLINES (Gold lines on sphere surface)
-            // Simplified continent coordinates [lat, lon] - recognizable shapes
+            // 2. HIGH-FIDELITY CONTINENT OUTLINES
+            // More detailed coordinates for recognizable continent shapes
             const continentData = {
-                // North America
                 northAmerica: [
-                    [70,-165],[72,-130],[72,-100],[70,-80],[65,-65],[60,-65],[55,-60],
-                    [50,-55],[47,-53],[45,-60],[43,-65],[45,-75],[42,-80],[38,-77],
+                    [71,-157],[72,-140],[71,-120],[70,-100],[68,-90],[65,-80],[60,-65],
+                    [55,-60],[50,-55],[47,-53],[44,-60],[42,-70],[40,-75],[38,-77],
                     [35,-76],[32,-80],[30,-82],[28,-83],[25,-80],[25,-90],[28,-95],
                     [30,-97],[32,-105],[30,-110],[32,-117],[35,-120],[40,-124],
-                    [45,-125],[50,-128],[55,-132],[58,-137],[60,-147],[62,-165],[65,-168],[70,-165]
+                    [45,-125],[50,-128],[55,-132],[58,-137],[60,-147],[62,-165],[65,-168],[71,-157]
                 ],
-                // South America
                 southAmerica: [
                     [12,-72],[10,-75],[8,-78],[5,-80],[2,-80],[-2,-80],[-5,-81],
                     [-8,-78],[-12,-77],[-15,-75],[-18,-70],[-22,-65],[-25,-58],
@@ -419,7 +417,6 @@
                     [-38,-73],[-33,-72],[-28,-70],[-22,-70],[-17,-72],[-12,-77],
                     [-7,-80],[-3,-80],[0,-80],[3,-77],[7,-75],[10,-73],[12,-72]
                 ],
-                // Europe
                 europe: [
                     [36,-9],[38,-9],[40,-8],[43,-8],[44,-2],[46,-2],[48,-5],
                     [50,-5],[52,-5],[54,-8],[56,-6],[58,-6],[60,-5],[62,-5],
@@ -433,7 +430,6 @@
                     [58,22],[56,20],[54,18],[52,15],[50,12],[48,10],[46,8],
                     [44,5],[42,3],[40,0],[38,-2],[36,-5],[36,-9]
                 ],
-                // Africa
                 africa: [
                     [37,-1],[36,10],[35,12],[33,12],[32,25],[31,32],[30,33],
                     [28,34],[25,35],[22,37],[18,40],[15,42],[12,44],[10,45],
@@ -444,7 +440,6 @@
                     [18,-15],[20,-17],[22,-17],[25,-15],[28,-13],[30,-10],
                     [32,-7],[34,-5],[36,-2],[37,-1]
                 ],
-                // Asia (simplified)
                 asia: [
                     [42,30],[44,35],[46,40],[48,45],[50,50],[52,55],[54,60],
                     [56,65],[58,70],[60,75],[62,80],[64,90],[66,100],[68,110],
@@ -466,7 +461,6 @@
                     [58,48],[56,48],[54,50],[52,50],[50,48],[48,45],
                     [46,42],[44,40],[42,38],[42,30]
                 ],
-                // Australia
                 australia: [
                     [-12,132],[-12,136],[-14,137],[-15,141],[-16,146],
                     [-18,146],[-20,149],[-22,150],[-24,152],[-26,153],
@@ -479,7 +473,6 @@
                 ]
             };
 
-            // Convert lat/lon to 3D sphere coordinates
             function latLonToVector3(lat, lon, radius) {
                 const phi = (90 - lat) * (Math.PI / 180);
                 const theta = (lon + 180) * (Math.PI / 180);
@@ -489,14 +482,13 @@
                 return new THREE.Vector3(x, y, z);
             }
 
-            // Create continent line group
             const continentGroup = new THREE.Group();
             const continentMat = new THREE.LineBasicMaterial({ 
-                color: 0xFFD700, transparent: true, opacity: 0.85 
+                color: 0xFFD700, transparent: true, opacity: 0.9, linewidth: 2
             });
 
             Object.values(continentData).forEach(coords => {
-                const points = coords.map(c => latLonToVector3(c[0], c[1], EARTH_RADIUS + 0.005));
+                const points = coords.map(c => latLonToVector3(c[0], c[1], EARTH_RADIUS + 0.008));
                 const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
                 const line = new THREE.Line(lineGeo, continentMat);
                 continentGroup.add(line);
