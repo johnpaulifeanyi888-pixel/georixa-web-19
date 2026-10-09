@@ -97,7 +97,7 @@
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
         .section-light .section-title { color: var(--text-dark); }
-        .section-subtitle { text-align: center; font-size: 1.2rem; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; font-weight: 500; }
+        .section-subtitle { text-align: center; font-size: 1.2rem; margin-bottom: 40px; max-width: 850px; margin-left: auto; margin-right: auto; font-weight: 500; }
         .section-dark .section-subtitle { color: var(--text-light); opacity: 0.9; }
         .section-light .section-subtitle { color: var(--text-muted); }
 
@@ -170,36 +170,6 @@
         .mineral-tags { display: flex; flex-wrap: wrap; gap: 7px; }
         .mineral-tag { background: #e0f2fe; border: 1px solid #bae6fd; color: #0c4a6e; padding: 6px 12px; border-radius: 4px; font-size: 0.9rem; font-weight: 800; }
 
-        /* EVIDENCE LEDGER MOCKUP */
-        .ledger-container { max-width: 650px; margin: 40px auto; }
-        .ledger-card {
-            background: var(--card-dark); border: 2px solid var(--accent-gold);
-            border-radius: 12px; padding: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-        .ledger-header { text-align: center; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid var(--border-dark); }
-        .ledger-title { font-size: 1.8rem; font-weight: 900; color: var(--accent-gold); letter-spacing: 1px; }
-        .ledger-subtitle { color: var(--text-light); opacity: 0.8; font-size: 1rem; margin-top: 5px; }
-        .ledger-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 25px; }
-        .ledger-item { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; border: 1px solid var(--border-dark); }
-        .ledger-label { font-size: 0.75rem; color: var(--text-light); opacity: 0.6; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-        .ledger-value { font-weight: 800; font-size: 1.1rem; }
-        .ledger-value.strong { color: var(--accent-lime); }
-        .ledger-value.supporting { color: var(--accent-cyan); }
-        .ledger-value.pending { color: var(--accent-coral); }
-        .ledger-footer { text-align: center; padding-top: 20px; border-top: 1px solid var(--border-dark); }
-        .ledger-status { color: var(--accent-cyan); font-weight: 900; font-size: 1.2rem; letter-spacing: 1px; margin-bottom: 10px; }
-        .ledger-note { color: var(--text-light); opacity: 0.8; font-size: 0.9rem; }
-
-        /* DECISION STATES */
-        .state-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 40px; }
-        .state-card { background: var(--card-light); border: 1px solid var(--border-light); padding: 20px; border-radius: 8px; text-align: center; }
-        .state-card h4 { font-size: 0.9rem; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .state-card.confirmed h4 { color: var(--accent-lime); }
-        .state-card.strong h4 { color: #0099cc; }
-        .state-card.ambiguous h4 { color: var(--accent-coral); }
-        .state-card.contradicted h4 { color: #ff4444; }
-        .state-card p { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
-
         /* CONTACT */
         .contact-box {
             max-width: 650px; margin: 40px auto 0; background: var(--card-light);
@@ -232,7 +202,6 @@
             .hero-sub { font-size: 1.1rem; }
             .section-title { font-size: 1.7rem; }
             .problem-number { font-size: 3rem; }
-            .ledger-grid { grid-template-columns: 1fr; }
             .btn { padding: 12px 22px; font-size: 0.95rem; }
         }
     </style>
@@ -241,9 +210,9 @@
     <header>
         <a href="#home" class="logo"><span class="logo-geo">GEO</span><span class="logo-rixa">RIXA</span><sup style="font-size:0.6rem;color:var(--accent-gold);">®</sup></a>
         <nav>
-            <a href="#platform">Platform</a>
-            <a href="#fusion">5-Layer Fusion</a>
+            <a href="#multiscale">Multi-Scale</a>
             <a href="#solutions">Solutions</a>
+            <a href="#fusion">5-Layer Fusion</a>
             <a href="#minerals">Minerals</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -255,12 +224,12 @@
         <div class="hero-content">
             <div class="badge">AI × Satellite × Earth Intelligence</div>
             <h1>FIND WHAT MATTERS.</h1>
-            <p class="hero-sub">From satellite observation to exploration targets.</p>
+            <p class="hero-sub">From satellite observation to mineral exploration targets.</p>
             <p class="hero-intro">GEORIXA® combines AI, satellite intelligence and multi-source Earth data to map geological opportunity, identify mineral evidence and prioritize the targets most deserving of field investigation.</p>
             
             <div class="cta-group">
                 <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%20Team,%20I%20want%20to%20scan%20my%20Area%20of%20Interest." class="btn btn-wa" target="_blank">Scan Your Area of Interest →</a>
-                <a href="#platform" class="btn btn-outline">Explore the platform</a>
+                <a href="#solutions" class="btn btn-outline">Explore Solutions</a>
             </div>
             
             <div class="hero-tagline">
@@ -275,118 +244,28 @@
             <h2 class="section-title">The exploration problem</h2>
             <p class="section-subtitle" style="font-size: 1.5rem; font-weight: 700; color: var(--text-light);">Too much ground. Too little time.</p>
             <p style="color: var(--text-light); opacity: 0.9; font-size: 1.1rem; margin-bottom: 20px;">Exploration teams face enormous search spaces, fragmented datasets and competing geological explanations. GEORIXA® is designed to reduce the space that deserves attention.</p>
-            <div class="problem-number">10,000 km²</div>
+            <div class="problem-number">25,000 km²</div>
             <p style="color: var(--text-light); opacity: 0.7;">Imagine thousands of observations across a regional exploration area. Where do you look first?</p>
         </div>
     </section>
 
-    <!-- 5-LAYER FUSION FRAMEWORK -->
-    <section id="fusion" class="section-dark" style="border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark);">
-        <h2 class="section-title">5-Layer Fusion Framework</h2>
-        <p class="section-subtitle">Multi-Sensor Remote Sensing & Target Discovery: Independent evidence dimensions, synthesized by our AI System.</p>
-        <div class="grid-5">
-            <div class="card">
-                <h3>1. Satellites</h3>
-                <p>Advanced satellite imaging capturing critical geological and mineralogical data across visible, SWIR, and thermal spectra.</p>
-            </div>
-            <div class="card">
-                <h3>2. Geophysics</h3>
-                <p>Magnetics, radiometrics, and gravity mapping fault lines, intrusive bodies, density contrasts, and basement structures.</p>
-            </div>
-            <div class="card">
-                <h3>3. Geochemistry</h3>
-                <p>Rock, soil, and stream sediment assays integrated with pathfinder element dispersion modeling.</p>
-            </div>
-            <div class="card">
-                <h3>4. Geostructure</h3>
-                <p>Elevation models, ridge lineaments, fault corridors, shear zones, and intrusive morphology.</p>
-            </div>
-            <div class="card" style="border-color: var(--accent-gold);">
-                <h3 style="color: var(--accent-gold);">5. AI System</h3>
-                <p>Fuses and synthesizes multi-dimensional data inputs to output high-probability, evidence-ranked exploration targets.</p>
-            </div>
-        </div>
-    </section>
+    <!-- MULTI-SCALE EXPLORATION (MOVED DIRECTLY BELOW THE PROBLEM) -->
+    <section id="multiscale" class="section-dark" style="border-top: 1px solid var(--border-dark); padding-top: 60px;">
+        <h2 class="section-title">Multi-scale exploration</h2>
+        <p class="section-subtitle">Regional intelligence to field intelligence.</p>
+        <p style="text-align: center; max-width: 900px; margin: -20px auto 35px; color: var(--accent-cyan); font-weight: 700; font-size: 1.15rem;">We narrow vast 25,000+ km² regional search spaces down to 2–25 km² camp-scale corridors, then lock onto coordinate-accurate priority targets.</p>
 
-    <!-- THE PLATFORM WORKFLOW -->
-    <section id="platform" class="section-light">
-        <h2 class="section-title">The GEORIXA platform</h2>
-        <p class="section-subtitle">From search space to target space.</p>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-muted); font-weight: 500;">A multi-scale intelligence platform that moves from broad Earth observation to focused exploration decisions.</p>
-        
         <div class="workflow-steps">
-            <div class="step-box"><div class="step-num">01</div><div class="step-name">OBSERVE</div></div>
-            <div class="step-box"><div class="step-num">02</div><div class="step-name">MAP</div></div>
-            <div class="step-box"><div class="step-num">03</div><div class="step-name">FIND</div></div>
-            <div class="step-box"><div class="step-num">04</div><div class="step-name">PRIORITIZE</div></div>
-            <div class="step-box"><div class="step-num">05</div><div class="step-name">CHALLENGE</div></div>
-            <div class="step-box"><div class="step-num">06</div><div class="step-name">VALIDATE</div></div>
+            <div class="step-box"><div class="step-num">01</div><div class="step-name">REGIONAL<br><span style="font-size:0.7rem; opacity:0.8;">25,000+ km²</span><br><span style="color:var(--accent-gold);">GEOSNIPER</span></div></div>
+            <div class="step-box"><div class="step-num">02</div><div class="step-name">LICENCE / CAMP<br><span style="font-size:0.7rem; opacity:0.8;">2 km² – 25 km²</span><br><span style="color:var(--accent-gold);">GEOSNIPER + OREFINDER</span></div></div>
+            <div class="step-box"><div class="step-num">03</div><div class="step-name">TARGET<br><span style="font-size:0.7rem; opacity:0.8;">Priority areas</span><br><span style="color:var(--accent-gold);">TARGETFINDER</span></div></div>
+            <div class="step-box"><div class="step-num">04</div><div class="step-name">FIELD<br><span style="font-size:0.7rem; opacity:0.8;">Finer-scale</span><br><span style="color:var(--accent-gold);">UAV / LiDAR</span></div></div>
+            <div class="step-box"><div class="step-num">05</div><div class="step-name">DRILL<br><span style="font-size:0.7rem; opacity:0.8;">Focused</span><br><span style="color:var(--accent-gold);">Professional decision</span></div></div>
         </div>
     </section>
 
-    <!-- SATELLITE INTELLIGENCE -->
-    <section class="section-dark">
-        <h2 class="section-title">Satellite intelligence</h2>
-        <p class="section-subtitle">See the Earth differently.</p>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-light); opacity: 0.9;">Satellite observation gives GEORIXA scale. AI and multi-source intelligence turn observation into exploration context.</p>
-        
-        <div class="grid-3">
-            <div class="card">
-                <h3>Satellite observation</h3>
-                <p>Hyperspectral, multispectral, high-resolution optical, thermal and other Earth-observation sources selected for the exploration question.</p>
-            </div>
-            <div class="card">
-                <h3>Geological context</h3>
-                <p>Geology, structures, terrain, geophysics, geochemistry and field observations provide context around remotely observed signals.</p>
-            </div>
-            <div class="card">
-                <h3>Priority target</h3>
-                <p>The output is not a prettier map. It is a clearer next exploration action.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- MULTI-SOURCE INTELLIGENCE -->
-    <section class="section-light">
-        <h2 class="section-title">Multi-source intelligence</h2>
-        <p class="section-subtitle">One Earth. Many sensors. One intelligence layer.</p>
-        
-        <div class="grid-3">
-            <div class="card">
-                <div class="source-icon">◈</div>
-                <h3 style="color: var(--text-dark);">Satellite</h3>
-                <p>Hyperspectral, multispectral, high-resolution optical, thermal and other Earth-observation sources.</p>
-            </div>
-            <div class="card">
-                <div class="source-icon">⌁</div>
-                <h3 style="color: var(--text-dark);">Air</h3>
-                <p>UAV, LiDAR, airborne sensing and high-intensity target investigation where finer-scale evidence is justified.</p>
-            </div>
-            <div class="card">
-                <div class="source-icon">△</div>
-                <h3 style="color: var(--text-dark);">Earth</h3>
-                <p>Geology, structures, terrain, geophysics, geochemistry and field observations provide context.</p>
-            </div>
-            <div class="card">
-                <div class="source-icon">✦</div>
-                <h3 style="color: var(--text-dark);">AI</h3>
-                <p>AI helps recognize patterns, connect evidence, prioritize targets and accelerate complex exploration workflows.</p>
-            </div>
-            <div class="card">
-                <div class="source-icon">◎</div>
-                <h3 style="color: var(--text-dark);">Validation</h3>
-                <p>Independent evidence and competing explanations keep the system from treating every anomaly as a discovery.</p>
-            </div>
-            <div class="card">
-                <div class="source-icon">→</div>
-                <h3 style="color: var(--text-dark);">Decision</h3>
-                <p>The output is not a prettier map. It is a clearer next exploration action.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOLUTIONS (VERB-BASED) -->
-    <section id="solutions" class="section-dark">
+    <!-- SOLUTIONS (MOVED DIRECTLY BELOW MULTI-SCALE EXPLORATION) -->
+    <section id="solutions" class="section-dark" style="border-top: 1px solid var(--border-dark);">
         <h2 class="section-title">Solutions</h2>
         <p class="section-subtitle">Map. Find. Prioritize. Focus.</p>
         <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-light); opacity: 0.9;">Each GEORIXA product has one job. Together they form a scalable exploration intelligence workflow.</p>
@@ -429,6 +308,95 @@
         </div>
     </section>
 
+    <!-- 5-LAYER FUSION FRAMEWORK (MOVED DIRECTLY BELOW SOLUTIONS) -->
+    <section id="fusion" class="section-dark" style="border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark);">
+        <h2 class="section-title">5-Layer Fusion Framework</h2>
+        <p class="section-subtitle">Multi-Sensor Remote Sensing & Target Discovery: Independent evidence dimensions, synthesized by our AI System.</p>
+        <div class="grid-5">
+            <div class="card">
+                <h3>1. Satellites</h3>
+                <p>Advanced satellite imaging capturing critical geological and mineralogical data across visible, SWIR, and thermal spectra.</p>
+            </div>
+            <div class="card">
+                <h3>2. Geophysics</h3>
+                <p>Magnetics, radiometrics, and gravity mapping fault lines, intrusive bodies, density contrasts, and basement structures.</p>
+            </div>
+            <div class="card">
+                <h3>3. Geochemistry</h3>
+                <p>Rock, soil, and stream sediment assays integrated with pathfinder element dispersion modeling.</p>
+            </div>
+            <div class="card">
+                <h3>4. Geostructure</h3>
+                <p>Elevation models, ridge lineaments, fault corridors, shear zones, and intrusive morphology.</p>
+            </div>
+            <div class="card" style="border-color: var(--accent-gold);">
+                <h3 style="color: var(--accent-gold);">5. AI System</h3>
+                <p>Fuses and synthesizes multi-dimensional data inputs to output high-probability, evidence-ranked exploration targets.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SATELLITE INTELLIGENCE -->
+    <section class="section-dark">
+        <h2 class="section-title">Satellite intelligence</h2>
+        <p class="section-subtitle">See the Earth differently.</p>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-light); opacity: 0.9;">Satellite observation gives GEORIXA scale. AI and multi-source intelligence turn observation into exploration context.</p>
+        
+        <div class="grid-3">
+            <div class="card">
+                <h3>Satellite observation</h3>
+                <p>Hyperspectral, multispectral, high-resolution optical, thermal and other Earth-observation sources selected for the exploration question.</p>
+            </div>
+            <div class="card">
+                <h3>Geological context</h3>
+                <p>Geology, structures, terrain, geophysics, geochemistry and field observations provide context around remotely observed signals.</p>
+            </div>
+            <div class="card">
+                <h3>Priority target</h3>
+                <p>The output is not a prettier map. It is a clearer next exploration action.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MULTI-SOURCE INTELLIGENCE -->
+    <section class="section-light">
+        <h2 class="section-title">Multi-source intelligence</h2>
+        <p class="section-subtitle">One Earth. Many sensors. One intelligence layer.</p>
+        
+        <div class="grid-3">
+            <div class="card">
+                <div class="source-icon">◈</div>
+                <h3 style="color: var(--text-dark);">Satellite</h3>
+                <p>Hyperspectral, multispectral, high-resolution optical, thermal and other Earth-observation sources.</p>
+            </div>
+            <div class="card">
+                <div class="source-icon">⌁</div>
+                <h3 style="color: var(--text-dark);">Air</h3>
+                <p>UAV, LiDAR, airborne sensing and high-intensity target investigation where finer-scale evidence is justified. Where data is available. (UAV planned capability).</p>
+            </div>
+            <div class="card">
+                <div class="source-icon">△</div>
+                <h3 style="color: var(--text-dark);">Earth</h3>
+                <p>Geology, structures, terrain, geophysics, geochemistry and field observations provide context.</p>
+            </div>
+            <div class="card">
+                <div class="source-icon">✦</div>
+                <h3 style="color: var(--text-dark);">AI</h3>
+                <p>Synthesizes multi-sensor Earth evidence into prioritized, coordinate-locked target matrices for direct field follow-up.</p>
+            </div>
+            <div class="card">
+                <div class="source-icon">◎</div>
+                <h3 style="color: var(--text-dark);">Validation</h3>
+                <p>Independent evidence and competing explanations keep the system from treating every anomaly as a discovery.</p>
+            </div>
+            <div class="card">
+                <div class="source-icon">→</div>
+                <h3 style="color: var(--text-dark);">Decision</h3>
+                <p>The output is not a prettier map. It is a clearer next exploration action.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- MINERAL INTELLIGENCE -->
     <section id="minerals" class="section-light">
         <h2 class="section-title">Mineral intelligence</h2>
@@ -437,127 +405,33 @@
         
         <div class="grid-3">
             <div class="mineral-category">
-                <h4>Lithium & pegmatites</h4>
-                <div class="mineral-tags"><span class="mineral-tag">Spodumene</span><span class="mineral-tag">Lepidolite</span><span class="mineral-tag">Petalite</span><span class="mineral-tag">Amblygonite</span><span class="mineral-tag">Cookeite</span></div>
-            </div>
-            <div class="mineral-category">
-                <h4>Copper Systems</h4>
-                <div class="mineral-tags"><span class="mineral-tag">Malachite</span><span class="mineral-tag">Azurite</span><span class="mineral-tag">Chrysocolla</span><span class="mineral-tag">Chalcopyrite</span><span class="mineral-tag">Cuprite</span></div>
+                <h4>Lithium Minerals</h4>
+                <div class="mineral-tags"><span class="mineral-tag">Spodumene</span><span class="mineral-tag">Lepidolite</span><span class="mineral-tag">Petalite</span><span class="mineral-tag">Amblygonite</span><span class="mineral-tag">Hectorite</span></div>
             </div>
             <div class="mineral-category">
                 <h4>Gold & Precious Metals</h4>
-                <div class="mineral-tags"><span class="mineral-tag">Gold-system</span><span class="mineral-tag">Alteration Halos</span><span class="mineral-tag">Pathfinders</span><span class="mineral-tag">Silver</span></div>
+                <div class="mineral-tags"><span class="mineral-tag">Gold</span><span class="mineral-tag">Gold-system</span><span class="mineral-tag">Alteration Halos</span><span class="mineral-tag">Pathfinders</span><span class="mineral-tag">Silver</span><span class="mineral-tag">Platinum</span></div>
             </div>
             <div class="mineral-category">
-                <h4>Rare Earth Elements</h4>
+                <h4>Copper Minerals</h4>
+                <div class="mineral-tags"><span class="mineral-tag">Malachite</span><span class="mineral-tag">Azurite</span><span class="mineral-tag">Chrysocolla</span><span class="mineral-tag">Cuprite</span><span class="mineral-tag">Chalcopyrite</span></div>
+            </div>
+            <div class="mineral-category">
+                <h4>REE Minerals</h4>
                 <div class="mineral-tags"><span class="mineral-tag">Monazite</span><span class="mineral-tag">Bastnäsite</span><span class="mineral-tag">Xenotime</span></div>
             </div>
             <div class="mineral-category">
-                <h4>Tin & Tungsten Systems</h4>
-                <div class="mineral-tags"><span class="mineral-tag">Cassiterite</span><span class="mineral-tag">Scheelite</span><span class="mineral-tag">Wolframite</span><span class="mineral-tag">Coltan</span></div>
+                <h4>Gemstones</h4>
+                <div class="mineral-tags"><span class="mineral-tag">Tourmaline</span><span class="mineral-tag">Garnet</span></div>
             </div>
             <div class="mineral-category">
-                <h4>Industrial & Gemstones</h4>
-                <div class="mineral-tags"><span class="mineral-tag">Beryl</span><span class="mineral-tag">Tourmaline</span><span class="mineral-tag">Zircon</span><span class="mineral-tag">Fluorite</span><span class="mineral-tag">Barite</span><span class="mineral-tag">Kaolinite</span><span class="mineral-tag">Potash</span></div>
+                <h4>Heavy Mineral Sands</h4>
+                <div class="mineral-tags"><span class="mineral-tag">Zircon Sand</span><span class="mineral-tag">Ilmenite</span></div>
             </div>
-        </div>
-    </section>
-
-    <!-- EVIDENCE ARCHITECTURE -->
-    <section class="section-dark">
-        <h2 class="section-title">Evidence architecture</h2>
-        <p class="section-subtitle">Not every anomaly is a target.</p>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-light); opacity: 0.9;">Detect. Challenge. Cross-validate. Prioritize. And when evidence is insufficient, preserve uncertainty.</p>
-        
-        <div class="grid-3">
-            <div class="card">
-                <h3 style="color: var(--accent-gold);">01 Detect</h3>
-                <p>Identify potentially meaningful spectral, geological, spatial, geophysical or geochemical evidence.</p>
+            <div class="mineral-category" style="grid-column: 1 / -1;">
+                <h4>Industrial Minerals</h4>
+                <div class="mineral-tags"><span class="mineral-tag">Kaolinite</span><span class="mineral-tag">Dolomite</span><span class="mineral-tag">Calcite</span><span class="mineral-tag">Hematite</span><span class="mineral-tag">Quartz</span><span class="mineral-tag">Feldspar</span><span class="mineral-tag">Aluminium Ores</span><span class="mineral-tag">Talc</span><span class="mineral-tag">Gypsum</span></div>
             </div>
-            <div class="card">
-                <h3 style="color: var(--accent-gold);">02 Challenge</h3>
-                <p>Evaluate competing explanations and known sources of false positives.</p>
-            </div>
-            <div class="card">
-                <h3 style="color: var(--accent-gold);">03 Cross-validate</h3>
-                <p>Look for supporting evidence across methods, sensors and independent information.</p>
-            </div>
-            <div class="card">
-                <h3 style="color: var(--accent-gold);">04 Prioritize</h3>
-                <p>Rank the targets most deserving of the next level of exploration effort.</p>
-            </div>
-            <div class="card" style="border-color: var(--accent-coral);">
-                <h3 style="color: var(--accent-coral);">05 Abstain</h3>
-                <p>When evidence is insufficient or contradictory, GEORIXA® can preserve uncertainty rather than force an answer.</p>
-            </div>
-            <div class="card">
-                <h3 style="color: var(--accent-gold);">06 Deliver</h3>
-                <p>Produce field-oriented target intelligence with location, evidence state, uncertainty and next checks.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- EVIDENCE LEDGER MOCKUP -->
-    <section class="section-light">
-        <h2 class="section-title">Evidence ledger</h2>
-        <p class="section-subtitle">Every target has a story.</p>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-muted); font-weight: 500;">A conceptual target record. The public interface shows the evidence and decision—not the proprietary recipe.</p>
-        
-        <div class="ledger-container">
-            <div class="ledger-card">
-                <div class="ledger-header">
-                    <div class="ledger-title">TARGET GX-0147</div>
-                    <div class="ledger-subtitle">Lithium Pegmatite Candidate</div>
-                </div>
-                <div class="ledger-grid">
-                    <div class="ledger-item">
-                        <div class="ledger-label">SPECTRAL</div>
-                        <div class="ledger-value strong">Strong</div>
-                    </div>
-                    <div class="ledger-item">
-                        <div class="ledger-label">GEOLOGY</div>
-                        <div class="ledger-value strong">Strong</div>
-                    </div>
-                    <div class="ledger-item">
-                        <div class="ledger-label">STRUCTURE</div>
-                        <div class="ledger-value supporting">Supporting</div>
-                    </div>
-                    <div class="ledger-item">
-                        <div class="ledger-label">GEOPHYSICS</div>
-                        <div class="ledger-value supporting">Supporting</div>
-                    </div>
-                    <div class="ledger-item">
-                        <div class="ledger-label">GEOCHEMISTRY</div>
-                        <div class="ledger-value pending">Pending</div>
-                    </div>
-                </div>
-                <div class="ledger-footer">
-                    <div class="ledger-status">STRONG CANDIDATE</div>
-                    <div class="ledger-note">Competing explanations evaluated. Field validation recommended.</div>
-                </div>
-            </div>
-        </div>
-
-        <h3 style="text-align: center; margin: 50px 0 30px; color: var(--text-dark); font-size: 1.5rem; font-weight: 800;">Decision states</h3>
-        <div class="state-grid">
-            <div class="state-card confirmed"><h4>CONFIRMED</h4><p>Strong independent supporting evidence.</p></div>
-            <div class="state-card strong"><h4>STRONG CANDIDATE</h4><p>Multiple meaningful evidence streams.</p></div>
-            <div class="state-card ambiguous"><h4>AMBIGUOUS</h4><p>Competing explanations remain.</p></div>
-            <div class="state-card contradicted"><h4>CONTRADICTED</h4><p>Important evidence conflicts.</p></div>
-        </div>
-    </section>
-
-    <!-- MULTI-SCALE EXPLORATION -->
-    <section class="section-dark">
-        <h2 class="section-title">Multi-scale exploration</h2>
-        <p class="section-subtitle">Regional intelligence to field intelligence.</p>
-        
-        <div class="workflow-steps">
-            <div class="step-box"><div class="step-num">01</div><div class="step-name">REGIONAL<br><span style="font-size:0.7rem; opacity:0.8;">10,000+ km²</span><br><span style="color:var(--accent-gold);">GEOSNIPER</span></div></div>
-            <div class="step-box"><div class="step-num">02</div><div class="step-name">LICENCE / CAMP<br><span style="font-size:0.7rem; opacity:0.8;">100s–1,000s km²</span><br><span style="color:var(--accent-gold);">GEOSNIPER + OREFINDER</span></div></div>
-            <div class="step-box"><div class="step-num">03</div><div class="step-name">TARGET<br><span style="font-size:0.7rem; opacity:0.8;">Priority areas</span><br><span style="color:var(--accent-gold);">TARGETFINDER</span></div></div>
-            <div class="step-box"><div class="step-num">04</div><div class="step-name">FIELD<br><span style="font-size:0.7rem; opacity:0.8;">Finer-scale</span><br><span style="color:var(--accent-gold);">UAV / LiDAR</span></div></div>
-            <div class="step-box"><div class="step-num">05</div><div class="step-name">DRILL<br><span style="font-size:0.7rem; opacity:0.8;">Focused</span><br><span style="color:var(--accent-gold);">Professional decision</span></div></div>
         </div>
     </section>
 
@@ -585,7 +459,7 @@
         <div class="grid-4">
             <div class="card" style="text-align: center;">
                 <h3 style="color: var(--accent-cyan);">AI</h3>
-                <p>Pattern recognition & decision support</p>
+                <p>Multi-dimensional data ingestion & decision support</p>
             </div>
             <div class="card" style="text-align: center;">
                 <h3 style="color: var(--accent-cyan);">SPACE</h3>
@@ -640,7 +514,7 @@
             renderer.setSize(container.clientWidth, container.clientHeight);
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-            // Hybrid Wireframe + Atmosphere Sphere (Zero External Image CDN Reliance)
+            // Hybrid Wireframe + Atmosphere Sphere
             const globeGeo = new THREE.SphereGeometry(1.8, 36, 36);
             const globeMat = new THREE.MeshBasicMaterial({
                 color: 0x00BFFF,
