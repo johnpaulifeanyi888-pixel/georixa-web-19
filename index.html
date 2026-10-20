@@ -521,7 +521,6 @@
     letter-spacing: 0.5px;
   }
 
-  /* STAGE DESCRIPTION — now 20px (1.5× from 13px) */
   .stage-desc {
     font-size: 20px;
     color: var(--text-primary);
@@ -631,7 +630,7 @@
   }
 
   /* ============================================
-     THREE PATHWAYS
+     FOUR PATHWAYS (Updated)
      ============================================ */
   .pathways {
     background: linear-gradient(135deg, #1A0B2E 0%, #2D1B4E 100%);
@@ -661,7 +660,7 @@
   .pathways-header p {
     font-size: 22px;
     color: var(--cyan);
-    max-width: 720px;
+    max-width: 820px;
     margin: 0 auto;
     line-height: 1.6;
     font-weight: 500;
@@ -669,7 +668,7 @@
 
   .pathways-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid for 4 cards */
     gap: 28px;
   }
 
@@ -720,6 +719,15 @@
     letter-spacing: -0.3px;
     line-height: 1.2;
     color: var(--text-primary);
+  }
+
+  .pathway-for {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
   }
 
   .pathway-desc {
@@ -864,6 +872,9 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
     }
+    .pathways-grid {
+      grid-template-columns: 1fr; /* Stack 4 tiers on tablet/mobile */
+    }
   }
 
   @media (max-width: 900px) {
@@ -888,7 +899,6 @@
     .pathways { padding: 64px 28px; }
     .pathways-header h2 { font-size: 32px; }
     .pathways-header p { font-size: 19px; }
-    .pathways-grid { grid-template-columns: 1fr; }
     .multiscale { padding: 64px 28px; }
     .multiscale-title { font-size: 30px; }
     .multiscale-tagline { font-size: 18px; }
@@ -1011,8 +1021,18 @@
   <div class="section-eyebrow">The Exploration Problem</div>
   <h2 class="section-title">Too much ground. Too little time.</h2>
   <p class="section-sub">
-    Exploration teams face enormous search spaces, fragmented datasets, and competing geological explanations. GEORIXA is designed to reduce the space that deserves attention.
+    Exploration teams face enormous search spaces, fragmented datasets, and competing geological explanations. GEORIXA® is designed to reduce the space that deserves attention.
   </p>
+
+  <!-- NEW 10,000 KM² CALLOUT -->
+  <div style="background-color: var(--bg-card); border: 1px solid var(--bg-border); border-left: 6px solid var(--cyan); border-radius: 12px; padding: 40px; margin-top: 40px; text-align: center;">
+    <div style="font-size: 72px; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 16px;">
+      10,000 km²
+    </div>
+    <p style="font-size: 22px; color: var(--text-primary); font-weight: 500; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+      Imagine thousands of observations across a regional exploration area. Where do you look first?
+    </p>
+  </div>
 </section>
 
 <!-- ============================================
@@ -1254,53 +1274,70 @@
 </section>
 
 <!-- ============================================
-     THREE PATHWAYS
+     FOUR PATHWAYS (UPDATED)
      ============================================ -->
 <section class="pathways">
   <div class="pathways-inner">
     <div class="pathways-header">
       <h2>How Can We Help?</h2>
-      <p>Three ways to work with GEORIXA. Choose the one that fits your project.</p>
+      <p>GEORIXA de-risks exploration, ranks high-potential targets, generates new projects, and saves capital. Whether you are an investor validating a licence, a company ranking a portfolio, or an AOI holder seeking a partner, choose your path below.</p>
     </div>
 
     <div class="pathways-grid">
 
+      <!-- TIER 1: DATA CHECK -->
       <div class="pathway-card">
         <div class="pathway-icon">🛰️</div>
-        <div class="pathway-title">Scan My Area of Interest</div>
+        <div class="pathway-title">Request Property Assessment</div>
+        <div class="pathway-for">For Miners &amp; AOI Holders</div>
         <p class="pathway-desc">
-          For miners, exploration teams, and licence holders who want satellite intelligence over a specific AOI and target mineral system.
+          For miners and Licence/AOI holders who want a professional satellite assessment of their area. Receive a fixed-fee proposal and a detailed assessment of your area's mineral potential.
         </p>
-        <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20would%20like%20to%20scan%20my%20area%20of%20interest.%0A%0AMineral%20of%20interest%3A%0AAOI%2Flocation%3A%0AApproximate%20area%3A%0AName%3A%0ACompany%3A"
+        <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20would%20like%20to%20request%20a%20Property%20Assessment." 
            class="pathway-btn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          SCAN MY AREA
+          REQUEST ASSESSMENT
         </a>
       </div>
 
-      <div class="pathway-card partnership">
-        <div class="pathway-icon">🤝</div>
-        <div class="pathway-title">Strategic Partnership</div>
+      <!-- TIER 2: PROJECT GENERATOR -->
+      <div class="pathway-card" style="border-color: var(--gold); background: linear-gradient(135deg, #241542 0%, #3D2260 100%);">
+        <div class="pathway-icon">💎</div>
+        <div class="pathway-title" style="color: var(--gold);">Project Generator (JV)</div>
+        <div class="pathway-for" style="color: var(--gold);">For Serious Licence Holders &amp; Investors</div>
         <p class="pathway-desc">
-          For mining companies, licence holders, associations, regional firms, and technology partners exploring long-term collaboration with GEORIXA.
+          We generate fresh targets and partner on high-potential assets. Submit a licence for a JV, or acquire a GEORIXA-generated project.
         </p>
-        <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20am%20interested%20in%20strategic%20partnership%20opportunities.%0A%0AName%3A%0ACompany%2Forganisation%3A%0ARegion%3A%0ABrief%20background%3A"
-           class="pathway-btn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          DISCUSS PARTNERSHIP
+        <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20am%20interested%20in%20the%20Project%20Generator%20(JV)%20model." 
+           class="pathway-btn" style="background-color: var(--gold); color: var(--bg-deep);" target="_blank" rel="noopener">
+          EXPLORE JV &amp; PROJECTS
         </a>
       </div>
 
+      <!-- TIER 3: AFFILIATE -->
       <div class="pathway-card affiliate">
         <div class="pathway-icon">🌐</div>
         <div class="pathway-title">Affiliate Program</div>
+        <div class="pathway-for">For Brokers &amp; Consultants</div>
         <p class="pathway-desc">
-          For geologists, brokers, consultants, and regional contacts who want to refer AOIs and clients to GEORIXA.
+          For geologists, brokers, and regional contacts who know licence holders. Refer clients to GEORIXA and earn a 15% commission on successful projects.
         </p>
-        <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20am%20interested%20in%20becoming%20an%20affiliate.%0A%0AName%3A%0ACompany%3A%0ARegion%3A%0ABackground%3A"
+        <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20am%20interested%20in%20becoming%20an%20affiliate." 
            class="pathway-btn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           JOIN AS AFFILIATE
+        </a>
+      </div>
+
+      <!-- TIER 4: PARTNERSHIP -->
+      <div class="pathway-card partnership">
+        <div class="pathway-icon">🤝</div>
+        <div class="pathway-title">Strategic Partnership</div>
+        <div class="pathway-for">For Companies &amp; Institutions</div>
+        <p class="pathway-desc">
+          For mining companies, government agencies, and tech partners seeking long-term collaboration. Regional distribution, technical integration, and joint venture opportunities.
+        </p>
+        <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20am%20interested%20in%20strategic%20partnership%20opportunities." 
+           class="pathway-btn" target="_blank" rel="noopener">
+          DISCUSS PARTNERSHIP
         </a>
       </div>
 
