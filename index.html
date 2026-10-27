@@ -1,1 +1,1558 @@
-THANK YOU 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEORIXA® — AI-Powered Mineral Detection & Exploration</title>
+<meta name="description" content="GEORIXA combines AI, satellite intelligence, geophysics, geostructure, and geochemistry to turn large exploration areas into focused, ranked targets.">
+
+<meta name="theme-color" content="#1A0B2E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='2' y='2' width='44' height='44' rx='4' fill='%23D4AF37'/%3E%3Cg transform='translate(24 24) scale(.66) translate(-24 -24)'%3E%3Cpath d='M38.8 13.2A17.5 17.5 0 1 0 41.5 24H26' fill='none' stroke='%231A0B2E' stroke-width='5.2' stroke-linecap='round'/%3E%3Cpath d='M38 5.5L43.5 11.5L38 18.5L32.5 11.5Z' fill='%2300F0FF' stroke='%231A0B2E' stroke-width='1.2'/%3E%3C/g%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GEORIXA® — AI-Powered Mineral Detection &amp; Exploration">
+<meta property="og:description" content="Turn large exploration areas into focused, evidence-ranked targets using AI, satellite intelligence, geophysics, geostructure and geochemistry.">
+<meta property="og:url" content="https://www.georixa.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"GEORIXA","url":"https://www.georixa.com","email":"georixa@gmail.com","telephone":"+2348032893111","address":{"@type":"PostalAddress","streetAddress":"Plot 1, Cadastral Zone F14, Kubwa","addressLocality":"Abuja","addressCountry":"NG"}}
+</script>
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg-deep: #0F0620;
+    --bg-primary: #1A0B2E;
+    --bg-card: #241542;
+    --bg-border: #2D1B4E;
+    --purple-accent: #7B2CBF;
+    --gold: #D4AF37;
+    --cyan: #00F0FF;
+    --whatsapp: #25D366;
+    --text-primary: #F5F5F7;
+    --text-secondary: #B8ABD4;
+  }
+
+  body {
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    line-height: 1.65;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============================================
+     NAVIGATION
+     ============================================ */
+  .nav {
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--bg-border);
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--cyan); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--cyan); }
+
+  .nav-cta {
+    background-color: var(--whatsapp);
+    color: var(--bg-deep) !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 700 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px !important;
+  }
+
+  .nav-cta svg { width: 18px; height: 18px; fill: var(--bg-deep); }
+
+  /* ============================================
+     HERO
+     ============================================ */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 680px;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #241542 100%);
+    border-bottom: 1px solid var(--bg-border);
+  }
+
+  .hero-text {
+    padding: 90px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    font-weight: 700;
+    margin-bottom: 28px;
+  }
+
+  .hero-wordmark {
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+
+  .hero-wordmark span { color: var(--cyan); }
+
+  .hero-descriptor {
+    font-size: 27px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 800;
+    margin-bottom: 26px;
+    line-height: 1.25;
+  }
+
+  .hero-headline {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 28px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-sub {
+    font-size: 22px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 44px;
+    max-width: 640px;
+    font-weight: 500;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background-color: var(--gold);
+    color: var(--bg-deep);
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--text-primary);
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    border: 1.5px solid var(--bg-border);
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+  }
+
+  .hero-image {
+    background-color: #0A0418;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+      rgba(26, 11, 46, 0.75) 0%,
+      rgba(26, 11, 46, 0.15) 40%,
+      rgba(26, 11, 46, 0) 100%);
+    pointer-events: none;
+  }
+
+  /* ============================================
+     QUICK ACTIONS TOOLBAR (NEW)
+     ============================================ */
+  .quick-actions {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--bg-border);
+    padding: 16px 48px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .action-btn {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--bg-border);
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+  }
+
+  .action-btn:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    background-color: #1A0B2E;
+  }
+
+  .action-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+
+  /* ============================================
+     STATS
+     ============================================ */
+  .stats {
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--bg-border);
+    padding: 56px 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .stat { text-align: center; }
+
+  .stat-number {
+    font-size: 52px;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .stat-label {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    font-weight: 700;
+  }
+
+  /* ============================================
+     SECTIONS
+     ============================================ */
+  .section {
+    padding: 96px 64px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+    color: var(--text-primary);
+  }
+
+  .section-sub {
+    font-size: 22px;
+    color: var(--cyan);
+    margin-bottom: 56px;
+    max-width: 820px;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  /* ============================================
+     MULTI-SCALE EXPLORATION
+     ============================================ */
+  .multiscale {
+    background: linear-gradient(135deg, #150926 0%, #241542 100%);
+    border-top: 1px solid var(--bg-border);
+    border-bottom: 1px solid var(--bg-border);
+    padding: 96px 64px;
+  }
+
+  .multiscale-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .multiscale-eyebrow {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .multiscale-title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--text-primary);
+  }
+
+  .multiscale-tagline {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 0.3px;
+  }
+
+  .multiscale-lead {
+    font-size: 22px;
+    color: var(--cyan);
+    line-height: 1.65;
+    max-width: 820px;
+    margin: 0 auto 56px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .multiscale-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .multiscale-stage {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--bg-border);
+    border-radius: 14px;
+    padding: 24px 32px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .multiscale-stage:hover {
+    border-color: var(--cyan);
+    transform: translateY(-2px);
+  }
+
+  .multiscale-stage-highlight {
+    background: linear-gradient(135deg, #241542 0%, #3D2260 100%);
+    border: 2px solid var(--gold);
+  }
+
+  .multiscale-stage-number {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--cyan);
+    line-height: 1;
+    letter-spacing: -1px;
+    min-width: 64px;
+    text-align: center;
+  }
+
+  .multiscale-stage-highlight .multiscale-stage-number {
+    color: var(--gold);
+  }
+
+  .multiscale-stage-body {
+    flex-grow: 1;
+  }
+
+  .multiscale-stage-label {
+    font-size: 13px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .multiscale-stage-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .multiscale-stage-highlight .multiscale-stage-value {
+    color: var(--gold);
+    font-size: 24px;
+  }
+
+  .multiscale-stage-product {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+  }
+
+  .multiscale-stage-highlight .multiscale-stage-product {
+    color: var(--cyan);
+  }
+
+  .multiscale-planned {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-style: italic;
+    font-size: 13px;
+  }
+
+  .multiscale-arrow {
+    font-size: 28px;
+    color: var(--cyan);
+    font-weight: 900;
+    text-align: center;
+    line-height: 1;
+    margin: 8px 0;
+  }
+
+  /* ============================================
+     FIVE-STAGE PRODUCT SYSTEM
+     ============================================ */
+  .stages {
+    padding: 96px 64px;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  .stages-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .stages-header .section-eyebrow {
+    margin-bottom: 16px;
+  }
+
+  .stages-header h2 {
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+  }
+
+  .stages-header p {
+    font-size: 22px;
+    color: var(--cyan);
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  .stages-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .stage-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--bg-border);
+    border-radius: 14px;
+    padding: 28px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s, transform 0.2s;
+    position: relative;
+  }
+
+  .stage-card:hover {
+    border-color: var(--cyan);
+    transform: translateY(-4px);
+  }
+
+  .stage-number {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--cyan);
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+
+  .stage-action {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--gold);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .stage-product {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+  }
+
+  .stage-desc {
+    font-size: 20px;
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+
+  /* ============================================
+     5-LAYER FRAMEWORK
+     ============================================ */
+  .framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  .framework-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--bg-border);
+    border-radius: 14px;
+    padding: 32px 28px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .framework-card:hover {
+    border-color: var(--purple-accent);
+    transform: translateY(-3px);
+  }
+
+  .framework-number {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--cyan);
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+
+  .framework-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: var(--gold);
+  }
+
+  .framework-body {
+    font-size: 16px;
+    color: var(--text-primary);
+    line-height: 1.7;
+  }
+
+  /* ============================================
+     BENEFITS
+     ============================================ */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+  }
+
+  .benefit {
+    background-color: var(--bg-card);
+    border-left: 4px solid var(--gold);
+    padding: 28px 32px;
+    border-radius: 8px;
+  }
+
+  .benefit-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+  }
+
+  .benefit-body {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* ============================================
+     MINERALS
+     ============================================ */
+  .minerals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .mineral-family {
+    background-color: var(--bg-card);
+    border: 1px solid var(--bg-border);
+    border-radius: 12px;
+    padding: 24px 28px;
+  }
+
+  .mineral-family-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+  }
+
+  .mineral-family-list {
+    font-size: 15px;
+    color: var(--text-primary);
+    line-height: 1.65;
+  }
+
+  /* ============================================
+     FOUR PATHWAYS (Updated)
+     ============================================ */
+  .pathways {
+    background: linear-gradient(135deg, #1A0B2E 0%, #2D1B4E 100%);
+    border-top: 1px solid var(--bg-border);
+    border-bottom: 1px solid var(--bg-border);
+    padding: 96px 64px;
+  }
+
+  .pathways-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .pathways-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .pathways-header h2 {
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+  }
+
+  .pathways-header p {
+    font-size: 22px;
+    color: var(--cyan);
+    max-width: 820px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  .pathways-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .pathway-card {
+    background-color: var(--bg-card);
+    border: 2px solid var(--bg-border);
+    border-radius: 16px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pathway-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gold);
+  }
+
+  .pathway-card.partnership::before { background: var(--cyan); }
+  .pathway-card.affiliate::before { background: var(--purple-accent); }
+
+  .pathway-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+
+  .pathway-card.partnership:hover { border-color: var(--cyan); }
+  .pathway-card.affiliate:hover { border-color: var(--purple-accent); }
+
+  .pathway-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+
+  .pathway-title {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+    color: var(--text-primary);
+  }
+
+  .pathway-for {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  .pathway-desc {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    flex-grow: 1;
+  }
+
+  .pathway-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--whatsapp);
+    color: white;
+    text-decoration: none;
+    padding: 16px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+  }
+
+  .pathway-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
+  }
+
+  .pathway-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    flex-shrink: 0;
+  }
+
+  /* ============================================
+     FOOTER
+     ============================================ */
+  .footer {
+    background-color: #0A0418;
+    padding: 72px 48px 36px;
+    border-top: 1px solid var(--bg-border);
+  }
+
+  .footer-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 56px;
+    margin-bottom: 48px;
+  }
+
+  .footer-col h4 {
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .footer-col p, .footer-col a {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    text-decoration: none;
+    display: block;
+  }
+
+  .footer-col a:hover { color: var(--cyan); }
+
+  .footer-brand {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-brand span { color: var(--cyan); }
+
+  .footer-tagline {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .footer-chain {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 1.9;
+  }
+
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 28px;
+    border-top: 1px solid var(--bg-border);
+    text-align: center;
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  /* ============================================
+     FLOATING WHATSAPP
+     ============================================ */
+  .float-wa {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background-color: var(--whatsapp);
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+    z-index: 998;
+    transition: transform 0.2s;
+  }
+
+  .float-wa:hover { transform: scale(1.1); }
+
+  .float-wa svg { width: 34px; height: 34px; fill: white; }
+
+  /* ============================================
+     BRAND LOCKUP, ACCESSIBILITY, NAVIGATION HELPERS
+     ============================================ */
+  html { scroll-behavior: smooth; }
+  [id] { scroll-margin-top: 84px; }
+
+  .skip-link {
+    position: absolute; left: 16px; top: -60px; z-index: 1000;
+    background: var(--gold); color: var(--bg-deep);
+    padding: 10px 18px; border-radius: 8px; font-weight: 700; text-decoration: none;
+  }
+  .skip-link:focus { top: 12px; }
+
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  .brand {
+    display: inline-flex; align-items: center; gap: 12px;
+    text-decoration: none; color: var(--text-primary);
+  }
+  .brand-mark { width: 44px; height: 44px; flex: none; }
+  .brand-name {
+    display: block; font-size: 26px; font-weight: 800;
+    letter-spacing: 1.5px; line-height: 1; color: var(--text-primary);
+  }
+  .brand .brand-name { color: var(--text-primary); }
+  .brand .brand-name span { color: var(--cyan); }
+  .brand .brand-tag { color: var(--text-secondary); }
+  .hero-brand .brand-name span { color: var(--cyan); }
+  .brand-tag {
+    display: block; font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--text-secondary); font-weight: 600; margin-top: 5px;
+  }
+  .hero-brand { display: flex; align-items: center; gap: 18px; margin-bottom: 28px; }
+  .hero-brand .brand-mark { width: 76px; height: 76px; }
+  .hero-brand .brand-name { font-size: 44px; letter-spacing: 2px; }
+  .hero-brand .brand-tag { font-size: 12px; letter-spacing: 4px; margin-top: 8px; }
+  .footer-brand { display: flex; align-items: center; gap: 10px; }
+  .brand-mark-sm { width: 34px; height: 34px; }
+
+  .cta-short { display: none; }
+
+  @media (max-width: 1100px) {
+    .stages-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .pathways-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 900px) {
+    body { font-size: 17px; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-text { padding: 64px 32px; order: 2; }
+    .hero-image { order: 1; height: 300px; }
+    .hero-headline { font-size: 36px; }
+    .hero-wordmark { font-size: 40px; }
+    .hero-descriptor { font-size: 22px; letter-spacing: 1.5px; line-height: 1.25; }
+    .hero-sub { font-size: 19px; line-height: 1.55; }
+    .nav { padding: 16px 24px; }
+    .nav-logo { font-size: 22px; }
+    .nav-links { display: none; }
+    .section { padding: 64px 28px; }
+    .section-title { font-size: 32px; }
+    .section-sub { font-size: 19px; }
+    .stats { padding: 48px 28px; grid-template-columns: 1fr; gap: 36px; }
+    .stat-number { font-size: 42px; }
+    .stat-label { font-size: 14px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+    .pathways { padding: 64px 28px; }
+    .pathways-header h2 { font-size: 32px; }
+    .pathways-header p { font-size: 19px; }
+    .multiscale { padding: 64px 28px; }
+    .multiscale-title { font-size: 30px; }
+    .multiscale-tagline { font-size: 18px; }
+    .multiscale-lead { font-size: 19px; }
+    .multiscale-stage { padding: 20px 24px; gap: 18px; }
+    .multiscale-stage-number { font-size: 26px; min-width: 48px; }
+    .multiscale-stage-value { font-size: 19px; }
+    .multiscale-stage-highlight .multiscale-stage-value { font-size: 21px; }
+    .stages { padding: 64px 28px; }
+    .stages-header h2 { font-size: 32px; }
+    .stages-header p { font-size: 19px; }
+    .framework-title { font-size: 20px; }
+    .stage-desc { font-size: 17px; line-height: 1.55; }
+    .quick-actions { padding: 16px 24px; }
+  }
+
+  @media (max-width: 480px) {
+    body { font-size: 16px; }
+    .hero-headline { font-size: 28px; }
+    .hero-wordmark { font-size: 32px; }
+    .hero-descriptor { font-size: 19px; letter-spacing: 1px; line-height: 1.25; }
+    .hero-sub { font-size: 17px; line-height: 1.5; }
+    .section-title { font-size: 26px; }
+    .section-sub { font-size: 17px; }
+    .stat-number { font-size: 36px; }
+    .pathways-header h2 { font-size: 26px; }
+    .pathways-header p { font-size: 17px; }
+    .multiscale-title { font-size: 24px; }
+    .multiscale-tagline { font-size: 16px; }
+    .multiscale-lead { font-size: 17px; }
+    .multiscale-stage { padding: 18px 20px; gap: 14px; }
+    .multiscale-stage-number { font-size: 22px; min-width: 40px; }
+    .multiscale-stage-value { font-size: 17px; }
+    .multiscale-stage-highlight .multiscale-stage-value { font-size: 18px; }
+    .multiscale-stage-label { font-size: 11px; letter-spacing: 2px; }
+    .multiscale-stage-product { font-size: 13px; }
+    .stages-header h2 { font-size: 26px; }
+    .stages-header p { font-size: 17px; }
+    .stage-action { font-size: 22px; }
+    .stage-desc { font-size: 15px; line-height: 1.5; }
+    .framework-grid, .minerals-grid, .benefits-grid, .stages-grid { grid-template-columns: 1fr; }
+    .btn-primary, .btn-secondary { font-size: 15px; padding: 16px 28px; width: 100%; text-align: center; }
+    .pathway-title { font-size: 22px; }
+    .pathway-card { padding: 32px 24px; }
+    .action-btn { width: 100%; justify-content: center; }
+  }
+
+  @media (max-width: 900px) {
+    .nav-links { display: flex; gap: 0; }
+    .nav-links li:not(:last-child) { display: none; }
+    .nav-cta { padding: 10px 18px; font-size: 13px !important; }
+    .hero-brand .brand-mark { width: 60px; height: 60px; }
+    .hero-brand .brand-name { font-size: 34px; }
+  }
+  @media (max-width: 480px) {
+    .brand-tag { display: none; }
+    .brand-name { font-size: 21px; }
+    .brand-mark { width: 38px; height: 38px; }
+    .cta-full { display: none; }
+    .cta-short { display: inline; }
+    .nav-cta svg { display: none; }
+    .nav { padding: 14px 16px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="gx-mark" viewBox="0 0 48 48">
+    <rect x="3" y="3" width="42" height="42" rx="3.5" fill="#1A0B2E" fill-opacity=".55" stroke="#D4AF37" stroke-width="2.6"/>
+    <g transform="translate(24 24) scale(.62) translate(-24 -24)">
+      <path d="M38.8 13.2A17.5 17.5 0 1 0 41.5 24H26" fill="none" stroke="#00F0FF" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M38 5.5L43.5 11.5L38 18.5L32.5 11.5Z" fill="#00F0FF" stroke="#1A0B2E" stroke-width="1.1"/>
+      <path d="M32.5 11.5H43.5M35.2 11.5L38 18.5L40.8 11.5" fill="none" stroke="#1A0B2E" stroke-width=".9"/>
+    </g>
+  </symbol>
+</svg>
+<a class="skip-link" href="#top">Skip to content</a>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="nav">
+  <a href="#top" class="brand nav-logo" aria-label="GEORIXA Earth Intelligence, home">
+    <svg class="brand-mark" aria-hidden="true"><use href="#gx-mark"/></svg>
+    <span><span class="brand-name">GEO<span>RIXA</span>®</span><span class="brand-tag">Earth Intelligence</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#top">Home</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#stages">Solutions</a></li>
+    <li><a href="#minerals">Minerals</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li>
+      <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20have%20an%20AOI%20I%20would%20like%20to%20discuss."
+         class="nav-cta" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span class="cta-full">CHAT WITH GEORIXA</span><span class="cta-short">CHAT WITH US</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" id="top">
+  <div class="hero-text">
+    <div class="hero-eyebrow">AI × Satellite × Earth Intelligence</div>
+    <div class="hero-brand" role="img" aria-label="GEORIXA Earth Intelligence">
+      <svg class="brand-mark" aria-hidden="true"><use href="#gx-mark"/></svg>
+      <div><span class="brand-name">GEO<span>RIXA</span>®</span><span class="brand-tag">Earth Intelligence</span></div>
+    </div>
+    <div class="hero-descriptor">AI-Powered Mineral Detection &amp; Exploration</div>
+    <h1 class="hero-headline">Turn Large Exploration Areas Into Focused Targets</h1>
+    <p class="hero-sub">
+      GEORIXA combines AI, satellite intelligence, geophysics, geostructure, and geochemistry to map geological opportunity, identify mineral evidence, and prioritize the targets most deserving of field investigation.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20would%20like%20to%20scan%20my%20area%20of%20interest."
+         class="btn-primary" target="_blank" rel="noopener">
+        SCAN MY AREA OF INTEREST
+      </a>
+      <a href="#stages" class="btn-secondary">SEE HOW IT WORKS</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&auto=format&fit=crop"
+         alt="Satellite orbiting Earth with cloud cover" loading="eager" fetchpriority="high" decoding="async">
+  </div>
+</section>
+
+<!-- ============================================
+     QUICK ACTIONS TOOLBAR (NEW)
+     ============================================ -->
+<div class="quick-actions">
+  <button id="copyBtn" class="action-btn">
+    <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+    Copy Code
+  </button>
+  <button id="downloadBtn" class="action-btn">
+    <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+    Download
+  </button>
+  <a href="https://wa.me/2348032893111" target="_blank" rel="noopener" class="action-btn" style="border-color: var(--gold); color: var(--gold);">
+    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    Run App
+  </a>
+</div>
+
+<!-- ============================================
+     STATS
+     ============================================ -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-number">30+</div>
+    <div class="stat-label">Target Mineral Systems</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">Pilot</div>
+    <div class="stat-label">Projects Available on Request</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">Nigeria</div>
+    <div class="stat-label">Based Operations · Africa-Focused</div>
+  </div>
+</div>
+
+<!-- ============================================
+     THE PROBLEM
+     ============================================ -->
+<section class="section">
+  <div class="section-eyebrow">The Exploration Problem</div>
+  <h2 class="section-title">Too much ground. Too little time.</h2>
+  <p class="section-sub">
+    Exploration teams face enormous search spaces, fragmented datasets, and competing geological explanations. GEORIXA® is designed to reduce the space that deserves attention.
+  </p>
+
+  <div style="background-color: var(--bg-card); border: 1px solid var(--bg-border); border-left: 6px solid var(--cyan); border-radius: 12px; padding: 40px; margin-top: 40px; text-align: center;">
+    <div style="font-size: 72px; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 16px;">
+      10,000 km²
+    </div>
+    <p style="font-size: 22px; color: var(--text-primary); font-weight: 500; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+      Imagine thousands of observations across a regional exploration area. Where do you look first?
+    </p>
+  </div>
+</section>
+
+<!-- ============================================
+     MULTI-SCALE EXPLORATION
+     ============================================ -->
+<section class="multiscale" id="how">
+  <div class="multiscale-inner">
+    <div class="multiscale-eyebrow">Multi-Scale Exploration</div>
+    <h2 class="multiscale-title">Regional intelligence to field intelligence.</h2>
+    <p class="multiscale-tagline">Exploration at the speed of intelligence.</p>
+
+    <p class="multiscale-lead">
+      GEORIXA is designed to accelerate large-area analysis and targeting. We narrow vast 10,000+ km² regional search spaces down to 2–20 km² focused corridors, then lock onto coordinate-defined priority targets.
+    </p>
+
+    <div class="multiscale-flow">
+      <div class="multiscale-stage">
+        <div class="multiscale-stage-number">01</div>
+        <div class="multiscale-stage-body">
+          <div class="multiscale-stage-label">REGIONAL</div>
+          <div class="multiscale-stage-value">10,000+ km²</div>
+          <div class="multiscale-stage-product">GEOSNIPER</div>
+        </div>
+      </div>
+      <div class="multiscale-arrow">↓</div>
+      <div class="multiscale-stage">
+        <div class="multiscale-stage-number">02</div>
+        <div class="multiscale-stage-body">
+          <div class="multiscale-stage-label">LICENCE / CAMP</div>
+          <div class="multiscale-stage-value">2 km² – 20 km²</div>
+          <div class="multiscale-stage-product">GEOSNIPER + OREFINDER</div>
+        </div>
+      </div>
+      <div class="multiscale-arrow">↓</div>
+      <div class="multiscale-stage multiscale-stage-highlight">
+        <div class="multiscale-stage-number">03</div>
+        <div class="multiscale-stage-body">
+          <div class="multiscale-stage-label">TARGET</div>
+          <div class="multiscale-stage-value">Priority areas</div>
+          <div class="multiscale-stage-product">TARGETFINDER</div>
+        </div>
+      </div>
+      <div class="multiscale-arrow">↓</div>
+      <div class="multiscale-stage">
+        <div class="multiscale-stage-number">04</div>
+        <div class="multiscale-stage-body">
+          <div class="multiscale-stage-label">FIELD</div>
+          <div class="multiscale-stage-value">Finer-scale</div>
+          <div class="multiscale-stage-product">UAV / LiDAR <span class="multiscale-planned">(planned)</span></div>
+        </div>
+      </div>
+      <div class="multiscale-arrow">↓</div>
+      <div class="multiscale-stage">
+        <div class="multiscale-stage-number">05</div>
+        <div class="multiscale-stage-body">
+          <div class="multiscale-stage-label">DRILL</div>
+          <div class="multiscale-stage-value">Focused</div>
+          <div class="multiscale-stage-product">Professional Decision</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FIVE-STAGE PRODUCT SYSTEM
+     ============================================ -->
+<section class="stages" id="stages">
+  <div class="stages-header">
+    <div class="section-eyebrow">GEORIXA Solutions</div>
+    <h2>From Map to Field.</h2>
+    <p>One exploration workflow. Five intelligence stages.</p>
+  </div>
+
+  <div class="stages-grid">
+    <div class="stage-card">
+      <div class="stage-number">01</div>
+      <div class="stage-action">MAP</div>
+      <div class="stage-product">GEOSNIPER™</div>
+      <p class="stage-desc">AI-powered geological intelligence for regional geological and lithological mapping and exploration context.</p>
+    </div>
+    <div class="stage-card">
+      <div class="stage-number">02</div>
+      <div class="stage-action">FIND</div>
+      <div class="stage-product">OREFINDER™</div>
+      <p class="stage-desc">AI-powered mineral intelligence for specific minerals and mineral systems across multi-source Earth observations.</p>
+    </div>
+    <div class="stage-card">
+      <div class="stage-number">03</div>
+      <div class="stage-action">PRIORITIZE</div>
+      <div class="stage-product">TARGETFINDER™</div>
+      <p class="stage-desc">AI-powered exploration targeting that narrows search space into evidence-ranked priority areas.</p>
+    </div>
+    <div class="stage-card">
+      <div class="stage-number">04</div>
+      <div class="stage-action">FOCUS</div>
+      <div class="stage-product">DRILL TARGETING</div>
+      <p class="stage-desc">Higher-resolution investigation around priority anomalies using finer-scale imagery and available data.</p>
+    </div>
+    <div class="stage-card">
+      <div class="stage-number">05</div>
+      <div class="stage-action">CONFIRM</div>
+      <div class="stage-product">GROUND TRUTH</div>
+      <p class="stage-desc">Field observation, sampling, and laboratory evidence connect remote intelligence to what is on Earth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MULTI-SOURCE EARTH INTELLIGENCE
+     ============================================ -->
+<section class="section" style="background-color: #150926; border-radius: 16px; max-width: 1320px;">
+  <div class="section-eyebrow">5-Layer Fusion Framework</div>
+  <h2 class="section-title">Multi-Sensor Remote Sensing &amp; Target Discovery</h2>
+  <p class="section-sub">One Earth. Multiple evidence sources. One intelligence layer.</p>
+
+  <div class="framework-grid">
+    <div class="framework-card">
+      <div class="framework-number">LAYER 1</div>
+      <div class="framework-title">Satellites</div>
+      <p class="framework-body">Advanced satellite imaging capturing critical geological and mineralogical data.</p>
+    </div>
+    <div class="framework-card">
+      <div class="framework-number">LAYER 2</div>
+      <div class="framework-title">Geophysics</div>
+      <p class="framework-body">Magnetics, radiometrics, and gravity mapping fault lines, intrusive bodies, density contrasts, and basement structures.</p>
+    </div>
+    <div class="framework-card">
+      <div class="framework-number">LAYER 3</div>
+      <div class="framework-title">Geochemistry</div>
+      <p class="framework-body">Rock, soil, and stream sediment assays integrated with pathfinder element dispersion modeling. Historical datasets.</p>
+    </div>
+    <div class="framework-card">
+      <div class="framework-number">LAYER 4</div>
+      <div class="framework-title">Geostructure</div>
+      <p class="framework-body">Elevation models, ridge lineaments, fault corridors, shear zones, and intrusive morphology.</p>
+    </div>
+    <div class="framework-card">
+      <div class="framework-number">LAYER 5</div>
+      <div class="framework-title">AI System</div>
+      <p class="framework-body">Fuses and synthesizes multi-dimensional data inputs to output evidence-ranked exploration targets.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     BENEFITS
+     ============================================ -->
+<section class="section">
+  <div class="section-eyebrow">What GEORIXA Does For Exploration Teams</div>
+  <h2 class="section-title">From data to decision.</h2>
+
+  <div class="benefits-grid">
+    <div class="benefit">
+      <div class="benefit-title">Search Less Ground</div>
+      <p class="benefit-body">Start with thousands of square kilometres and focus attention on smaller prospective areas.</p>
+    </div>
+    <div class="benefit">
+      <div class="benefit-title">Move Faster</div>
+      <p class="benefit-body">Automate and accelerate the analysis of large volumes of Earth observation and exploration data.</p>
+    </div>
+    <div class="benefit">
+      <div class="benefit-title">Reduce Field Search</div>
+      <p class="benefit-body">Give field teams a smaller number of priority areas to investigate.</p>
+    </div>
+    <div class="benefit">
+      <div class="benefit-title">Use Capital Better</div>
+      <p class="benefit-body">Focus expensive geological work, sampling, and drilling on targets supported by multiple sources of evidence.</p>
+    </div>
+    <div class="benefit">
+      <div class="benefit-title">See More Evidence</div>
+      <p class="benefit-body">Bring satellite, geophysics, geology, geochemistry, and field information into one exploration workflow.</p>
+    </div>
+    <div class="benefit">
+      <div class="benefit-title">Make Better Decisions</div>
+      <p class="benefit-body">Receive structured target locations, evidence, and recommended field priorities — not simply a large anomaly map.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MINERALS
+     ============================================ -->
+<section class="section" id="minerals">
+  <div class="section-eyebrow">Mineral Intelligence</div>
+  <h2 class="section-title">Explore mineral systems.</h2>
+  <p class="section-sub">Specific capabilities are activated according to sensor, geology, data quality, and exploration objective.</p>
+
+  <div class="minerals-grid">
+    <div class="mineral-family">
+      <div class="mineral-family-name">Lithium Minerals</div>
+      <div class="mineral-family-list">Spodumene, Lepidolite, Amblygonite, Hectorite</div>
+    </div>
+    <div class="mineral-family">
+      <div class="mineral-family-name">Gold &amp; Precious Metals</div>
+      <div class="mineral-family-list">Gold, Gold-pathfinder minerals, Silver, Platinum</div>
+    </div>
+    <div class="mineral-family">
+      <div class="mineral-family-name">Copper Minerals</div>
+      <div class="mineral-family-list">Malachite, Azurite, Chrysocolla, Cuprite, Chalcopyrite</div>
+    </div>
+    <div class="mineral-family">
+      <div class="mineral-family-name">Rare Earth Elements</div>
+      <div class="mineral-family-list">Monazite, Bastnäsite, Xenotime, Parisite</div>
+    </div>
+    <div class="mineral-family">
+      <div class="mineral-family-name">Heavy Mineral Sands</div>
+      <div class="mineral-family-list">Zircon, Ilmenite</div>
+    </div>
+    <div class="mineral-family">
+      <div class="mineral-family-name">Industrial Minerals</div>
+      <div class="mineral-family-list">Kaolinite, Dolomite, Calcite, Hematite, Manganese, Quartz, Feldspar, Gypsum</div>
+    </div>
+    <div class="mineral-family">
+      <div class="mineral-family-name">Gemstones</div>
+      <div class="mineral-family-list">Tourmaline, Garnet</div>
+    </div>
+    <div class="mineral-family">
+      <div class="mineral-family-name">Other Systems</div>
+      <div class="mineral-family-list">Available on request</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOUR PATHWAYS
+     ============================================ -->
+<section class="pathways" id="partners">
+  <div class="pathways-inner">
+    <div class="pathways-header">
+      <h2>How Can We Help?</h2>
+      <p>GEORIXA de-risks exploration, ranks high-potential targets, generates new projects, and saves capital. Whether you are an investor validating a licence, a company ranking a portfolio, or an AOI holder seeking a partner, choose your path below.</p>
+    </div>
+
+    <div class="pathways-grid">
+      <div class="pathway-card">
+        <div class="pathway-icon">🛰️</div>
+        <div class="pathway-title">Request Property Assessment</div>
+        <div class="pathway-for">For Miners &amp; AOI Holders</div>
+        <p class="pathway-desc">
+          For miners and Licence/AOI holders who want a professional satellite assessment of their area. Receive a fixed-fee proposal and a detailed assessment of your area's mineral potential.
+        </p>
+        <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20would%20like%20to%20request%20a%20Property%20Assessment." 
+           class="pathway-btn" target="_blank" rel="noopener">
+          REQUEST ASSESSMENT
+        </a>
+      </div>
+
+      <div class="pathway-card" style="border-color: var(--gold); background: linear-gradient(135deg, #241542 0%, #3D2260 100%);">
+        <div class="pathway-icon">💎</div>
+        <div class="pathway-title" style="color: var(--gold);">Project Generator (JV)</div>
+        <div class="pathway-for" style="color: var(--gold);">For Serious Licence Holders &amp; Investors</div>
+        <p class="pathway-desc">
+          We generate fresh targets and partner on high-potential assets. Submit a licence for a JV, or acquire a GEORIXA-generated project.
+        </p>
+        <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20am%20interested%20in%20the%20Project%20Generator%20(JV)%20model." 
+           class="pathway-btn" style="background-color: var(--gold); color: var(--bg-deep);" target="_blank" rel="noopener">
+          EXPLORE JV &amp; PROJECTS
+        </a>
+      </div>
+
+      <div class="pathway-card affiliate">
+        <div class="pathway-icon">🌐</div>
+        <div class="pathway-title">Affiliate Program</div>
+        <div class="pathway-for">For Brokers &amp; Consultants</div>
+        <p class="pathway-desc">
+          For geologists, brokers, and regional contacts who know licence holders. Refer clients to GEORIXA and earn a 15% commission on successful projects.
+        </p>
+        <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20am%20interested%20in%20becoming%20an%20affiliate." 
+           class="pathway-btn" target="_blank" rel="noopener">
+          JOIN AS AFFILIATE
+        </a>
+      </div>
+
+      <div class="pathway-card partnership">
+        <div class="pathway-icon">🤝</div>
+        <div class="pathway-title">Strategic Partnership</div>
+        <div class="pathway-for">For Companies &amp; Institutions</div>
+        <p class="pathway-desc">
+          For mining companies, government agencies, and tech partners seeking long-term collaboration. Regional distribution, technical integration, and joint venture opportunities.
+        </p>
+        <a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20am%20interested%20in%20strategic%20partnership%20opportunities." 
+           class="pathway-btn" target="_blank" rel="noopener">
+          DISCUSS PARTNERSHIP
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer" id="contact">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-brand"><svg class="brand-mark brand-mark-sm" aria-hidden="true"><use href="#gx-mark"/></svg><span>GEO<span>RIXA</span>®</span></div>
+      <div class="footer-tagline">Earth Intelligence</div>
+      <div class="footer-chain">
+        GEORIXA finds.<br>
+        Engineer decides.<br>
+        Geologist confirms.<br>
+        Drilling quantifies.
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <a href="#top">Home</a>
+      <a href="#how">How It Works</a>
+      <a href="#stages">Solutions</a>
+      <a href="#minerals">Minerals</a>
+      <a href="#partners">Partners</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Plot 1, Cadastral Zone F14,<br>Kubwa, Abuja, Nigeria</p>
+      <a href="tel:+2348032893111">+234 803 289 3111</a>
+      <a href="mailto:georixa@gmail.com">georixa@gmail.com</a>
+      <a href="https://www.georixa.com">www.georixa.com</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    Remote intelligence supports exploration targeting; it does not replace geological mapping, sampling, drilling, resource estimation, or professional judgement.<br>
+    © 2026 GEORIXA® Earth Intelligence. All rights reserved.
+  </div>
+</footer>
+
+<!-- ============================================
+     FLOATING WHATSAPP
+     ============================================ -->
+<a href="https://wa.me/2348032893111?text=Hello%20GEORIXA%2C%20I%20have%20an%20exploration%20question."
+   class="float-wa" target="_blank" rel="noopener" aria-label="Chat with GEORIXA">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- ============================================
+     JAVASCRIPT FOR QUICK ACTIONS
+     ============================================ -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1. Copy Code Functionality
+    const copyBtn = document.getElementById('copyBtn');
+    copyBtn.addEventListener('click', function() {
+      const htmlContent = document.documentElement.outerHTML;
+      navigator.clipboard.writeText(htmlContent).then(() => {
+        const originalText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<svg viewBox="0 0 24 24" style="fill: #25D366;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Copied!';
+        setTimeout(() => { copyBtn.innerHTML = originalText; }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+        alert('Failed to copy. Your browser may not support this feature.');
+      });
+    });
+
+    // 2. Download Functionality
+    const downloadBtn = document.getElementById('downloadBtn');
+    downloadBtn.addEventListener('click', function() {
+      const htmlContent = document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: 'text/html' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'georixa_website.html';
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    });
+  });
+</script>
+
+</body>
+</html>
